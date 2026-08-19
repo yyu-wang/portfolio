@@ -45,7 +45,14 @@
   .hd .role { font-size: 15px; font-weight: 700; color: var(--accent); margin-top: 6px; }
   .hd .tagline { font-size: 12.5px; color: var(--muted); margin-top: 5px; }
   .hd-right { text-align: right; font-size: 12.5px; color: var(--ink); flex-shrink: 0; }
-  .hd-right p { line-height: 1.9; white-space: nowrap; }
+  .hd-right p { display: flex; justify-content: flex-end; align-items: baseline; line-height: 1.9; white-space: nowrap; }
+  .hd-right .lbl {
+    display: inline-block; width: 34px; flex-shrink: 0; margin-right: 10px;
+    font-size: 10.5px; color: var(--muted);
+    text-align: justify; text-align-last: justify;
+  }
+  .hd-right .meta { color: var(--muted); font-size: 11.5px; }
+  .hd-right a { color: var(--accent); text-decoration: none; }
   .hd-right .mono { font-family: var(--font-mono); font-size: 12px; }
 
   /* ---------- sections ---------- */
@@ -100,7 +107,7 @@
     .page { padding: 26px 20px; }
     .hd { flex-direction: column; align-items: flex-start; }
     .hd-right { text-align: left; }
-    .hd-right p { white-space: normal; }
+    .hd-right p { white-space: normal; justify-content: flex-start; }
     .kv { grid-template-columns: 1fr; }
     .entry-head { flex-wrap: wrap; }
   }
@@ -129,9 +136,10 @@
       <div class="tagline">7 年前端经验 ｜ 主攻：SSE 流式交互 · Agent 工具编排 · 多模态生图 · 端侧 AI 推理</div>
     </div>
     <div class="hd-right">
-      <p class="mono">17677127011 ｜ 623272616@qq.com</p>
-      <p class="mono"><a href="https://yyu-wang.github.io/portfolio/" style="color: inherit;">yyu-wang.github.io/portfolio</a></p>
-      <p>男 · 30 岁 ｜ 期望城市：深圳 ｜ 随时到岗</p>
+      <p><span class="lbl">电话</span><span class="mono">176-7712-7011</span></p>
+      <p><span class="lbl">邮箱</span><span class="mono">623272616@qq.com</span></p>
+      <p><span class="lbl">作品集</span><a class="mono" href="https://yyu-wang.github.io/portfolio/">yyu-wang.github.io/portfolio</a></p>
+      <p><span class="lbl"></span><span class="meta">男 · 30 岁 ｜ 深圳 ｜ 随时到岗</span></p>
     </div>
   </header>
 
