@@ -40,20 +40,16 @@
   }
 
   /* ---------- header ---------- */
-  .hd { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; padding-bottom: 16px; border-bottom: 3px solid var(--ink); }
+  .hd { padding-bottom: 16px; border-bottom: 3px solid var(--ink); }
   .hd h1 { font-size: 34px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.1; }
   .hd .role { font-size: 15px; font-weight: 700; color: var(--accent); margin-top: 6px; }
   .hd .tagline { font-size: 12.5px; color: var(--muted); margin-top: 5px; }
-  .hd-right { text-align: right; font-size: 12.5px; color: var(--ink); flex-shrink: 0; }
-  .hd-right p { display: flex; justify-content: flex-end; align-items: baseline; line-height: 1.9; white-space: nowrap; }
-  .hd-right .lbl {
-    display: inline-block; width: 34px; flex-shrink: 0; margin-right: 10px;
-    font-size: 10.5px; color: var(--muted);
-    text-align: justify; text-align-last: justify;
-  }
-  .hd-right .meta { color: var(--muted); font-size: 11.5px; }
-  .hd-right a { color: var(--accent); text-decoration: none; }
-  .hd-right .mono { font-family: var(--font-mono); font-size: 12px; }
+  .hd-contact { display: flex; flex-wrap: wrap; gap: 4px 22px; margin-top: 12px; font-size: 12.5px; color: var(--ink); }
+  .hd-contact .item { display: flex; align-items: baseline; line-height: 1.9; white-space: nowrap; }
+  .hd-contact .lbl { font-size: 10.5px; color: var(--muted); margin-right: 7px; }
+  .hd-contact .meta { color: var(--muted); font-size: 11.5px; }
+  .hd-contact a { color: var(--accent); text-decoration: none; }
+  .hd-contact .mono { font-family: var(--font-mono); font-size: 12px; }
 
   /* ---------- sections ---------- */
   section { margin-top: 24px; }
@@ -105,9 +101,8 @@
 
   @media (max-width: 640px) {
     .page { padding: 26px 20px; }
-    .hd { flex-direction: column; align-items: flex-start; }
-    .hd-right { text-align: left; }
-    .hd-right p { white-space: normal; justify-content: flex-start; }
+    .hd-contact { gap: 2px 16px; }
+    .hd-contact .item { white-space: normal; }
     .kv { grid-template-columns: 1fr; }
     .entry-head { flex-wrap: wrap; }
   }
@@ -130,17 +125,15 @@
 
   <!-- ================= header ================= -->
   <header class="hd">
-    <div>
-      <h1>王 嵛</h1>
-      <div class="role">资深全栈开发工程师</div>
-      <div class="tagline">7 年经验 ｜ 前端深度（Vue / React 双栈）· 后端服务（Node / Python）· 数据库与缓存 · 独立交付完整产品</div>
-    </div>
-    <div class="hd-right">
-      <p><span class="lbl">电话</span><span class="mono">176-7712-7011</span></p>
-      <p><span class="lbl">邮箱</span><span class="mono">623272616@qq.com</span></p>
-      <p><span class="lbl">作品集</span><a class="mono" href="https://yyu-wang.github.io/portfolio/">yyu-wang.github.io/portfolio</a></p>
-      <p><span class="lbl">在线</span><a class="mono" href="https://wying.club/">wying.club</a><span class="meta"> · 营销项目（需 VPN）</span></p>
-      <p><span class="lbl"></span><span class="meta">男 · 30 岁 ｜ 深圳 ｜ 随时到岗</span></p>
+    <h1>王 嵛</h1>
+    <div class="role">资深全栈开发工程师</div>
+    <div class="tagline">7 年经验 ｜ 前端深度（Vue / React 双栈）· 后端服务（Node / Python）· 数据库与缓存 · 独立交付完整产品</div>
+    <div class="hd-contact">
+      <span class="item"><span class="lbl">电话</span><span class="mono">176-7712-7011</span></span>
+      <span class="item"><span class="lbl">邮箱</span><span class="mono">623272616@qq.com</span></span>
+      <span class="item"><span class="lbl">作品集</span><a class="mono" href="https://yyu-wang.github.io/portfolio/">yyu-wang.github.io/portfolio</a></span>
+      <span class="item"><span class="lbl">在线</span><a class="mono" href="https://wying.club/">https://wying.club</a><span class="meta">（需 VPN）</span></span>
+      <span class="item"><span class="meta">男 · 30 岁 ｜ 深圳 ｜ 随时到岗</span></span>
     </div>
   </header>
 
