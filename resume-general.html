@@ -251,11 +251,12 @@
         <span class="chip">Vue 3.5</span><span class="chip">TypeScript</span><span class="chip">Pinia</span><span class="chip">LeaferJS</span><span class="chip">VChart</span><span class="chip">@tanstack/vue-virtual</span>
       </div>
       <ul class="bul">
-        <li><b>LeaferJS 脑图渲染引擎</b>：策略模式分离布局（LayoutEngine）/ 渲染（MindMapRenderer）/ 画布交互（AppManager）职责，两阶段布局算法（后序遍历计算尺寸 + 前序遍历确定位置）支撑万级节点流畅渲染，替代传统图表库减少约 <span class="hl">60% 包体积</span></li>
-        <li><b>虚拟滚动</b> + 动态列数计算 + 图片懒加载：万级商品列表 DOM 节点降至 20 个以下，滚动稳定 <span class="hl">60fps</span>；ResizeObserver + 防抖处理滚动边距补偿</li>
+        <li><b>LeaferJS 脑图渲染引擎</b>：策略模式分离布局（LayoutEngine）/ 渲染（MindMapRenderer）/ 画布交互（AppManager）职责，两阶段布局算法（后序遍历计算尺寸 + 前序遍历确定位置）、按层级动态切换子节点横竖排布与 L 型连接线渲染，支撑万级节点流畅渲染，替代传统图表库减少约 <span class="hl">60% 包体积</span></li>
+        <li>万级商品图片网格<b>行列混合虚拟滚动</b>：按容器宽度动态计算每行列数 + measureElement 实测修正行高 + 图片懒加载联动，DOM 节点降至 20 个以下，滚动稳定 <span class="hl">60fps</span>；ResizeObserver + 防抖处理滚动边距补偿</li>
+        <li>自研<b>品类结构树表格</b>：三层动态表头（指标 → 时间分组 → 值/占比）、递归 rowspan 单元格合并、季节父项跨行聚合，支持表头排序与指标列显隐偏好配置</li>
         <li>基于 createSharedComposable 设计<b>跨面板共享筛选状态架构</b>，序列号 + AbortController 解决 5 级级联筛选（品牌→年份/季节→渠道→指标→多级属性）竞态覆盖难题</li>
-        <li>封装 Axios 请求层：SSO 无感认证刷新、状态码集中治理、防抖防重入；集成神策埋点实现用户行为全链路追踪</li>
-        <li>manualChunks 分包 + 依赖去重治理构建体积；封装 VChart 图表组件库（9 种图表）统一空态与销毁管理</li>
+        <li>封装 Axios 请求层：SSO 无感认证刷新（524 / 525 / 401 统一重登）、状态码集中治理、防抖防重入；集成神策埋点实现用户行为全链路追踪</li>
+        <li>manualChunks 分包 + resolve.dedupe 解决 LeaferJS 多 chunk 重复打包导致的画布渲染异常；封装 VChart 图表组件库（9 种图表）统一空态与销毁管理</li>
       </ul>
     </div>
 
@@ -282,15 +283,16 @@
         <div class="t">长青老龄大学信息化管理平台<span class="sub"> · 前端组长</span></div>
         <div class="date">2022.12 – 2023.09</div>
       </div>
-      <div class="sum">老年教育数字化平台，Web 管理后台 + 微信小程序双端，支撑 10,000+ 学员日常教学活动。</div>
+      <div class="sum">老年教育数字化平台，Web 管理后台（16 个业务模块）+ 微信小程序（96 个页面）双端，支撑 10,000+ 学员日常教学活动。</div>
       <div class="chips">
         <span class="chip">Vue 3</span><span class="chip">TypeScript</span><span class="chip">Ant Design Vue</span><span class="chip">微信小程序原生</span><span class="chip">Vant Weapp</span><span class="chip">TinyMCE</span>
       </div>
       <ul class="bul">
-        <li><b>JSON Schema 低代码表单引擎</b>：自动注册 20+ 表单控件，一份配置同时生成表格列 / 搜索项 / 表单字段，支持表单 / 编辑 / 详情三模式切换，单页开发效率提升 <span class="hl">60%</span></li>
+        <li><b>JSON Schema 低代码表单引擎</b>：require.context 自动注册 20+ 表单控件，支持分组模块 / 嵌套表格表单 / 动态显隐与校验，一份配置同时生成表格列 / 搜索项 / 表单字段，支持表单 / 编辑 / 详情三模式切换，单页开发效率提升 <span class="hl">60%</span></li>
         <li><b>SparkMD5 分片上传</b> + 断点续传 / 秒传机制，教师课件上传成功率从 70% 提升至 <span class="hl">99%</span></li>
-        <li>动态路由 + RBAC 菜单级 / 按钮级细粒度权限；TinyMCE 深度定制（自定义上传 / XSS 防护）；html2canvas + jsPDF 纯前端 PDF 导出</li>
-        <li>小程序端双分包架构 + 自定义 TabBar；路由懒加载等优化<b>首屏 3.5s → 1.8s</b>；沉淀 30+ 可复用组件并输出《表单配置化开发指南》</li>
+        <li>动态路由 + RBAC 权限体系：filterAsyncRouter 递归转换后端路由配置，v-permission 指令支持 every / not 组合实现按钮级权限；TinyMCE 深度定制（自定义上传回调 / 禁止拖拽粘贴图片）；html2canvas + jsPDF 多页 A4 分页导出</li>
+        <li>小程序端主包 + 双分包架构（96 页面）+ 自定义 TabBar；集成小鹅通直播在线课堂、扫码打卡考勤（师生双端 + 补卡审批）、报名缴费（休学金抵扣计算）全链路业务</li>
+        <li>路由懒加载等优化<b>首屏 3.5s → 1.8s</b>；沉淀 30+ 可复用组件并输出《表单配置化开发指南》</li>
       </ul>
     </div>
   </section>
