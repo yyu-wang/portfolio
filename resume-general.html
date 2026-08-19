@@ -88,6 +88,8 @@
   ul.bul { list-style: none; margin-top: 6px; }
   ul.bul li { position: relative; padding-left: 14px; font-size: 12.5px; margin-bottom: 4px; }
   ul.bul li::before { content: ''; position: absolute; left: 1px; top: 0.66em; width: 5px; height: 5px; background: var(--accent2); border-radius: 1px; }
+  .entry a, .sum a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .sum a { font-family: var(--font-mono); font-size: 11.5px; font-weight: 400; }
   ul.bul li b { font-weight: 700; }
   ul.bul li .hl { font-weight: 700; color: var(--accent); }
 
@@ -147,6 +149,8 @@
       <dd>两段<b>前端负责人 / 组长</b>经历；从 0 到 1 搭建组件库（30+ 组件）与 CI/CD 流水线，统一 GitFlow / ESLint / Prettier 规范；沉淀《表单配置化开发指南》，团队开发效率提升 50%。</dd>
       <dt>多端与协作</dt>
       <dd>小程序（原生双分包）/ H5 / PC 多端统一适配；具备 Node.js（Nest）/ Go（Gin）后端协作认知，擅长前后端交互协议设计；深度践行 Cursor、Claude Code 等 AI 辅助研发范式。</dd>
+      <dt>独立交付与开源</dt>
+      <dd>独立完成全栈产品 Marketing Wise（NestJS + Vue 3 + React 19 三端 Monorepo，SSE 流式 + Redis 限额 + CI/CD 自动部署，线上运行）；将生产代码沉淀为开源库 agent-sse-gateway（27 单测 + CI 全绿）；完整作品集见 yyu-wang.github.io/portfolio。</dd>
     </dl>
   </section>
 
@@ -278,6 +282,45 @@
         <li><b>SparkMD5 分片上传</b> + 断点续传 / 秒传机制，教师课件上传成功率从 70% 提升至 <span class="hl">99%</span></li>
         <li>动态路由 + RBAC 菜单级 / 按钮级细粒度权限；TinyMCE 深度定制（自定义上传 / XSS 防护）；html2canvas + jsPDF 纯前端 PDF 导出</li>
         <li>小程序端双分包架构 + 自定义 TabBar；路由懒加载等优化<b>首屏 3.5s → 1.8s</b>；沉淀 30+ 可复用组件并输出《表单配置化开发指南》</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= personal projects ================= -->
+  <section>
+    <h2 class="sec">个人项目<span class="en">PERSONAL PROJECTS</span></h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="t">Marketing Wise<span class="sub"> · AI 营销文案生成平台 · 全栈独立开发 · 在线运行</span></div>
+        <div class="date">2026</div>
+      </div>
+      <div class="sum"><a href="https://github.com/yyu-wang/marketing">github.com/yyu-wang/marketing</a> · 在线体验 <a href="https://wying.club/">wying.club</a></div>
+      <ul class="bul">
+        <li>Monorepo 三端交付：<b>NestJS 10 + TypeORM + MySQL + Redis</b> 后端、Vue 3 + Element Plus 用户端、React 19 + Ant Design 6 管理后台；独立完成产品设计、前后端开发、CI/CD 自动部署到线上运维全流程</li>
+        <li>核心机制：SSE 流式输出、多轮对话、Redis Lua 脚本原子限额扣减 + MySQL 双写、项目归属服务端校验防越权；仓库附 PRD 需求规格与架构 / 分层 / 代码规范开发指南</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="t">agent-sse-gateway<span class="sub"> · 多协议 SSE 网关与生图调度器 · 开源</span></div>
+        <div class="date">2026.08 – 至今</div>
+      </div>
+      <div class="sum"><a href="https://github.com/yyu-wang/agent-sse-gateway">github.com/yyu-wang/agent-sse-gateway</a> —— 从生产代码抽离重构的零框架依赖 TypeScript 库</div>
+      <ul class="bul">
+        <li>多协议 SSE 双层解析、统一事件模型、多模型并行生图槽位调度（乱序回填 / 取消状态机 / 幽灵请求治理）；vitest 27 个单测 + GitHub Actions CI 全绿，完整架构文档与可运行 demo</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="t">fileMind<span class="sub"> · 桌面端文件整理 + RAG 问答</span></div>
+        <div class="date">2026</div>
+      </div>
+      <div class="sum"><a href="https://github.com/yyu-wang/fileMind">github.com/yyu-wang/fileMind</a></div>
+      <ul class="bul">
+        <li>Tauri 2 + React 19 壳层、Python FastAPI Sidecar 向量检索，本地文件即知识库 —— 跨端开发与 AI 检索的全栈实践</li>
       </ul>
     </div>
   </section>

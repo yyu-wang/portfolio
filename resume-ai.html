@@ -57,6 +57,8 @@
     border-bottom: 1.5px solid var(--accent);
   }
   h2.sec .en { margin-left: auto; font-family: var(--font-mono); font-size: 10px; font-weight: 400; color: var(--muted); letter-spacing: 0.18em; }
+  .entry a, .sum a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .sum a { font-family: var(--font-mono); font-size: 11.5px; font-weight: 400; }
 
   /* ---------- kv rows ---------- */
   .kv { display: grid; grid-template-columns: 118px 1fr; gap: 5px 14px; }
@@ -149,6 +151,8 @@
       <dd>将 Cursor、Claude Code 等 AI Agent 融入需求分析、原型搭建、代码重构、文档生成全流程；构建项目级 Rules 与上下文管理策略，人机结对编程显著提升研发效率。</dd>
       <dt>工程性能底座</dt>
       <dd>Vue 3 / TypeScript / Vite 原理级理解；万级列表虚拟滚动 60fps、万级节点脑图两阶段布局；Fabric.js 编辑器插件体系、Three.js 3D 预览等图形能力支撑 AI 交互落地。</dd>
+      <dt>开源与技术沉淀</dt>
+      <dd>将生产级 SSE 网关与生图调度器抽离为开源库 <b>agent-sse-gateway</b>（vitest 27 单测 + CI 全绿）；独立开发全栈产品 Marketing Wise（NestJS + Vue 3 + React 19 三端 Monorepo，线上运行）；完整作品集见 <b>yyu-wang.github.io/portfolio</b>。</dd>
     </dl>
   </section>
 
@@ -278,6 +282,34 @@
       <ul class="bul">
         <li><b>JSON Schema 低代码表单引擎</b>：自动注册 20+ 表单控件，一份配置同时生成表格列 / 搜索项 / 表单字段，单页开发效率提升 <span class="hl">60%</span></li>
         <li><b>SparkMD5 分片上传</b> + 断点续传 / 秒传，课件上传成功率 70% → <span class="hl">99%</span>；动态路由 RBAC 细粒度权限；首屏 3.5s → 1.8s；沉淀 30+ 可复用组件与《表单配置化开发指南》</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= personal projects ================= -->
+  <section>
+    <h2 class="sec">个人项目<span class="en">PERSONAL PROJECTS</span></h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="t">agent-sse-gateway<span class="sub"> · 多协议 SSE 网关与生图调度器 · 开源</span></div>
+        <div class="date">2026.08 – 至今</div>
+      </div>
+      <div class="sum"><a href="https://github.com/yyu-wang/agent-sse-gateway">github.com/yyu-wang/agent-sse-gateway</a> —— 从丽境生产代码抽离、脱敏、重构的通用库，上方丽境 SSE 网关与生图调度能力的开源版本</div>
+      <ul class="bul">
+        <li>零框架依赖 TypeScript 核心库：多协议 SSE 双层解析、统一 AgentStreamEvent 事件模型、多模型并行生图槽位调度（乱序回填 / 取消状态机 / 幽灵请求治理）</li>
+        <li>vitest 27 个单测 + GitHub Actions CI 全绿；README 含架构图、协议归一化对照表与 5 条生产踩坑设计决策，附 mock SSE 服务器，零后端可运行 demo</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="t">Marketing Wise<span class="sub"> · AI 营销文案生成平台 · 全栈独立开发 · 在线运行</span></div>
+        <div class="date">2026</div>
+      </div>
+      <div class="sum"><a href="https://github.com/yyu-wang/marketing">github.com/yyu-wang/marketing</a> · 在线体验 <a href="https://wying.club/">wying.club</a></div>
+      <ul class="bul">
+        <li>NestJS 10 + TypeORM + MySQL + Redis 后端、Vue 3 用户端、React 19 管理后台三端 Monorepo；SSE 流式文案生成、多轮对话、Redis Lua 原子限额扣减、GitHub Actions 三工作流自动部署；仓库附 PRD 需求规格与开发指南</li>
       </ul>
     </div>
   </section>
