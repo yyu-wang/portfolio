@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>王嵛 · 资深前端开发工程师（AI 应用方向）· 求职作品集</title>
+<meta name="description" content="7 年前端经验，主攻 AI 应用层：SSE 流式交互、Agent 工具编排、多模态生图调度、端侧推理。百丽 AI 设计平台「丽境」前端核心开发。" />
+<style>
+  :root {
+    --bg: #0b0e14;
+    --bg2: #10141d;
+    --bg3: #161b28;
+    --ink: #e8ebf2;
+    --muted: #9aa3b8;
+    --faint: #6e7789;
+    --rule: #232a3a;
+    --rule-soft: #1a2130;
+    --accent: #5b8cff;
+    --accent-dim: rgba(91, 140, 255, 0.14);
+    --accent2: #38d9a9;
+    --accent2-dim: rgba(56, 217, 169, 0.12);
+    --warn: #ffb454;
+    --danger: #ff6b6b;
+    --mono: 'SF Mono', 'JetBrains Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    --maxw: 1060px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15.5px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: rgba(91, 140, 255, 0.35); }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11, 14, 20, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  nav .bar {
+    max-width: var(--maxw); margin: 0 auto; padding: 14px 28px;
+    display: flex; align-items: center; gap: 22px;
+  }
+  nav .logo { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--ink); }
+  nav .logo em { color: var(--accent2); font-style: normal; }
+  nav .links { display: flex; gap: 4px; margin-left: auto; }
+  nav .links a {
+    color: var(--muted); font-size: 13.5px; padding: 5px 12px;
+    border-radius: 7px; transition: color .15s, background .15s;
+  }
+  nav .links a:hover { color: var(--ink); background: var(--bg3); text-decoration: none; }
+  nav .links a.active { color: var(--accent); }
+  nav .gh {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: var(--mono); font-size: 12.5px; color: var(--ink);
+    border: 1px solid var(--rule); border-radius: 7px; padding: 5px 13px;
+    transition: border-color .15s, background .15s;
+  }
+  nav .gh:hover { border-color: var(--accent); background: var(--bg3); text-decoration: none; }
+  nav .gh svg { width: 15px; height: 15px; fill: currentColor; }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 84px 0 72px; border-bottom: 1px solid var(--rule-soft); position: relative; overflow: hidden; }
+  .hero::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(900px 360px at 18% -60px, rgba(91, 140, 255, 0.13), transparent 65%);
+  }
+  .hero .grid {
+    position: relative;
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center;
+  }
+  .eyebrow {
+    font-family: var(--mono); font-size: 13px; color: var(--accent2);
+    letter-spacing: 0.04em; margin-bottom: 18px;
+  }
+  .eyebrow .c { color: var(--faint); }
+  h1 { font-size: 52px; font-weight: 800; line-height: 1.12; letter-spacing: 0.01em; }
+  .hero .pos {
+    margin-top: 14px; font-size: 19px; color: var(--accent); font-weight: 600;
+  }
+  .hero .thesis {
+    margin-top: 18px; font-size: 16px; color: var(--muted); max-width: 30em;
+  }
+  .hero .thesis b { color: var(--ink); font-weight: 600; }
+
+  .stats { display: flex; gap: 34px; margin-top: 34px; flex-wrap: wrap; }
+  .stat .n { font-family: var(--mono); font-size: 25px; font-weight: 700; color: var(--ink); }
+  .stat .n em { font-style: normal; color: var(--accent); }
+  .stat .l { font-size: 12.5px; color: var(--faint); margin-top: 2px; }
+
+  .hero .ctas { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 600; padding: 10px 22px; border-radius: 9px;
+    border: 1px solid var(--rule); color: var(--ink); background: var(--bg3);
+    transition: border-color .15s, transform .15s;
+  }
+  .btn:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-1px); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary:hover { filter: brightness(1.08); }
+  .btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+  /* ---------- sse terminal ---------- */
+  .terminal {
+    background: var(--bg2); border: 1px solid var(--rule); border-radius: 13px;
+    overflow: hidden; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+    font-family: var(--mono); font-size: 12.5px; line-height: 1.9;
+  }
+  .terminal .tbar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; border-bottom: 1px solid var(--rule-soft); background: var(--bg3);
+  }
+  .terminal .tbar i { width: 11px; height: 11px; border-radius: 50%; background: var(--rule); }
+  .terminal .tbar i:nth-child(1) { background: #ff5f57; }
+  .terminal .tbar i:nth-child(2) { background: #febc2e; }
+  .terminal .tbar i:nth-child(3) { background: #28c840; }
+  .terminal .tbar span { margin-left: 6px; color: var(--faint); font-size: 11.5px; }
+  .terminal .tbody { padding: 15px 17px 17px; min-height: 218px; }
+  .terminal .ln { white-space: pre-wrap; word-break: break-all; color: var(--muted); }
+  .terminal .ln .ev { color: var(--accent2); }
+  .terminal .ln .ev.dim { color: var(--warn); }
+  .terminal .ln .cmd { color: var(--ink); }
+  .terminal .ln .txt { color: var(--ink); }
+  .terminal .ln .ok { color: var(--accent); }
+  .terminal .caret {
+    display: inline-block; width: 7px; height: 13px; margin-left: 2px;
+    background: var(--accent2); vertical-align: -2px;
+    animation: blink .9s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ---------- sections ---------- */
+  section.block { padding: 72px 0; border-bottom: 1px solid var(--rule-soft); }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 14px; }
+  .sec-head h2 { font-size: 26px; font-weight: 800; letter-spacing: 0.01em; }
+  .sec-head .idx { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+  .sec-head .en { margin-left: auto; font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; color: var(--faint); text-transform: uppercase; }
+  .sec-desc { color: var(--muted); font-size: 14.5px; max-width: 46em; margin-bottom: 34px; }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ---------- featured repo ---------- */
+  .featured {
+    border: 1px solid var(--rule); border-radius: 15px; background: var(--bg2);
+    overflow: hidden;
+  }
+  .featured .top {
+    display: flex; align-items: flex-start; gap: 18px; flex-wrap: wrap;
+    padding: 26px 28px 0;
+  }
+  .featured h3 { font-size: 21px; font-weight: 700; }
+  .featured h3 .tag {
+    font-family: var(--mono); font-size: 11px; color: var(--accent2);
+    border: 1px solid rgba(56, 217, 169, 0.4); border-radius: 5px;
+    padding: 2px 8px; margin-left: 10px; vertical-align: 3px; white-space: nowrap;
+  }
+  .featured .repourl {
+    font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin-top: 5px;
+  }
+  .featured .repourl a { color: var(--accent); }
+  .badges { display: flex; gap: 8px; margin-left: auto; flex-wrap: wrap; }
+  .badge {
+    font-family: var(--mono); font-size: 11px; padding: 3px 10px; border-radius: 999px;
+    border: 1px solid var(--rule); color: var(--muted); background: var(--bg3); white-space: nowrap;
+  }
+  .badge.pass { color: var(--accent2); border-color: rgba(56, 217, 169, 0.35); }
+
+  .featured .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 22px; }
+  .featured .col { padding: 4px 28px 26px; }
+  .featured .col + .col { border-left: 1px solid var(--rule-soft); }
+  .featured h4 {
+    font-family: var(--mono); font-size: 12px; color: var(--warn);
+    letter-spacing: 0.08em; margin: 18px 0 8px;
+  }
+  .featured p { font-size: 14px; color: var(--muted); }
+  .featured p b { color: var(--ink); font-weight: 600; }
+  .featured ul { list-style: none; }
+  .featured ul li {
+    position: relative; padding-left: 16px; font-size: 13.5px;
+    color: var(--muted); margin-bottom: 7px;
+  }
+  .featured ul li::before {
+    content: ''; position: absolute; left: 1px; top: 0.68em;
+    width: 5px; height: 5px; border-radius: 1.5px; background: var(--accent2);
+  }
+  .featured ul li b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- secondary repo ---------- */
+  .repo-row { display: grid; grid-template-columns: 1fr 260px; gap: 26px; margin-top: 26px; align-items: stretch; }
+  .repo-card {
+    border: 1px solid var(--rule); border-radius: 13px; background: var(--bg2);
+    padding: 22px 26px; display: flex; flex-direction: column; gap: 8px;
+    transition: border-color .2s;
+  }
+  .repo-card:hover { border-color: rgba(91, 140, 255, 0.5); }
+  .repo-card .rh { display: flex; align-items: center; gap: 10px; }
+  .repo-card h3 { font-size: 16.5px; font-weight: 700; }
+  .repo-card .lang { font-family: var(--mono); font-size: 11px; color: var(--warn); border: 1px solid var(--rule); border-radius: 999px; padding: 2px 9px; }
+  .repo-card p { font-size: 13.5px; color: var(--muted); }
+  .repo-card .stack { font-family: var(--mono); font-size: 11.5px; color: var(--faint); margin-top: auto; padding-top: 8px; }
+
+  /* ---------- projects ---------- */
+  .proj { padding: 30px 0; border-bottom: 1px dashed var(--rule); }
+  .proj:first-of-type { border-top: 1px dashed var(--rule); }
+  .proj .ph { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .proj .ph h3 { font-size: 18px; font-weight: 700; }
+  .proj .ph .role { font-size: 13px; color: var(--accent); }
+  .proj .ph .date { margin-left: auto; font-family: var(--mono); font-size: 12px; color: var(--faint); white-space: nowrap; }
+  .proj .sum { color: var(--muted); font-size: 14px; margin-top: 6px; }
+  .proj .sum .hl { color: var(--warn); font-weight: 600; }
+  .proj ul { list-style: none; margin-top: 12px; }
+  .proj ul li { position: relative; padding-left: 17px; font-size: 13.8px; color: var(--muted); margin-bottom: 6px; }
+  .proj ul li::before {
+    content: ''; position: absolute; left: 1px; top: 0.7em;
+    width: 5px; height: 5px; border-radius: 1.5px; background: var(--accent);
+  }
+  .proj ul li b { color: var(--ink); font-weight: 600; }
+  .proj ul li .hl { color: var(--accent2); font-weight: 600; }
+  .proj .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .chip {
+    font-family: var(--mono); font-size: 11px; color: var(--muted);
+    border: 1px solid var(--rule); border-radius: 5px; padding: 2px 9px; background: var(--bg2);
+  }
+
+  /* ---------- skills ---------- */
+  .skills { display: grid; grid-template-columns: 150px 1fr; gap: 14px 26px; }
+  .skills dt { font-weight: 700; font-size: 14px; color: var(--accent2); }
+  .skills dd { font-size: 14px; color: var(--muted); }
+  .skills dd b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- experience ---------- */
+  .xp { display: grid; grid-template-columns: 170px 1fr; gap: 26px; padding: 22px 0; border-bottom: 1px dashed var(--rule); }
+  .xp:last-child { border-bottom: none; }
+  .xp .when { font-family: var(--mono); font-size: 12.5px; color: var(--faint); padding-top: 3px; }
+  .xp .where { font-size: 15.5px; font-weight: 700; }
+  .xp .where .role { color: var(--accent); font-size: 13px; font-weight: 600; margin-left: 10px; }
+  .xp p { font-size: 13.8px; color: var(--muted); margin-top: 5px; }
+
+  /* ---------- contact ---------- */
+  .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 30px; }
+  .contact-card {
+    display: flex; align-items: center; gap: 14px;
+    border: 1px solid var(--rule); border-radius: 12px; background: var(--bg2);
+    padding: 18px 22px; transition: border-color .2s;
+  }
+  .contact-card:hover { border-color: var(--accent); text-decoration: none; }
+  .contact-card svg { width: 19px; height: 19px; fill: var(--accent); flex-shrink: 0; }
+  .contact-card .cc-t { font-size: 14.5px; font-weight: 600; color: var(--ink); }
+  .contact-card .cc-s { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin-top: 1px; }
+  .contact-card.dl svg { fill: var(--accent2); }
+
+  footer { padding: 40px 0 48px; color: var(--faint); font-size: 12.5px; }
+  footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+  footer code { font-family: var(--mono); color: var(--muted); }
+  footer .fin { margin-left: auto; font-family: var(--mono); }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px) {
+    .hero .grid { grid-template-columns: 1fr; gap: 40px; }
+    h1 { font-size: 40px; }
+    .featured .cols { grid-template-columns: 1fr; }
+    .featured .col + .col { border-left: none; border-top: 1px solid var(--rule-soft); }
+    .repo-row { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    nav .links { display: none; }
+    .skills { grid-template-columns: 1fr; gap: 4px 0 0; }
+    .skills dd { margin-bottom: 12px; }
+    .xp { grid-template-columns: 1fr; gap: 4px; }
+    section.block { padding: 52px 0; }
+    .badges { margin-left: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .terminal .caret { animation: none; }
+    .btn:hover { transform: none; }
+  }
+
+  /* ---------- print ---------- */
+  @media print {
+    body { background: #fff; color: #1a1a1a; font-size: 12px; }
+    nav, .terminal, footer .fin { display: none; }
+    .hero, section.block { padding: 20px 0; border-bottom: 1px solid #ddd; }
+    .hero::before { display: none; }
+    .featured, .repo-card, .contact-card { border-color: #ccc; background: #fafafa; box-shadow: none; }
+    .proj ul li, .featured p, .featured ul li, .proj .sum, .skills dd, .xp p { color: #333; }
+    .stat .n, .proj .ph h3, .featured h3, .repo-card h3, .sec-head h2, h1 { color: #000; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="bar">
+    <span class="logo">wangyu<em>.dev</em></span>
+    <div class="links">
+      <a href="#work">开源作品</a>
+      <a href="#projects">生产案例</a>
+      <a href="#skills">能力</a>
+      <a href="#experience">经历</a>
+      <a href="#contact">联系</a>
+    </div>
+    <a class="gh" href="https://github.com/yyu-wang" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      yyu-wang
+    </a>
+  </div>
+</nav>
+
+<!-- ================= hero ================= -->
+<header class="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow"><span class="c">//</span> 资深前端开发工程师 · AI 应用方向 · 7 年</div>
+      <h1>王 嵛</h1>
+      <div class="pos">把大模型能力，做成稳定、流畅、可维护的前端产品</div>
+      <p class="thesis">
+        主攻 <b>SSE 流式交互</b>、<b>Agent 工具编排</b>、<b>多模态生图调度</b>与<b>端侧 AI 推理</b>；
+        兼具 B 端复杂系统架构与极致性能优化的工程底座。
+        曾主导百丽 AI 设计平台「丽境」前端建设，AI 功能日均调用超万次。
+      </p>
+      <div class="stats">
+        <div class="stat"><div class="n">7<em> 年</em></div><div class="l">前端研发经验</div></div>
+        <div class="stat"><div class="n">1<em> 万+</em></div><div class="l">丽境 AI 功能日均调用</div></div>
+        <div class="stat"><div class="n">8<em>+</em></div><div class="l">生图场景统一调度复用</div></div>
+        <div class="stat"><div class="n">60<em>fps</em></div><div class="l">万级列表虚拟滚动</div></div>
+      </div>
+      <div class="ctas">
+        <a class="btn primary" href="#contact">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 2.5A1.5 1.5 0 0 1 3 1h3.38a1.5 1.5 0 0 1 1.5 1.34l.28 2.87a1.5 1.5 0 0 1-1.06 1.57l-1.4.44a11.2 11.2 0 0 0 5.68 5.68l.44-1.4a1.5 1.5 0 0 1 1.57-1.06l2.87.28A1.5 1.5 0 0 1 15 12.62V16h-1.5c-6.9 0-12.5-5.6-12.5-12.5V2.5Z"/></svg>
+          联系我
+        </a>
+        <a class="btn" href="#work">看开源作品 ↓</a>
+      </div>
+    </div>
+
+    <div class="terminal" aria-label="SSE 流式事件演示">
+      <div class="tbar"><i></i><i></i><i></i><span>agent-sse-gateway · demo</span></div>
+      <div class="tbody" id="sse-demo"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= open source ================= -->
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">01</span><h2>开源作品</h2><span class="en">Open Source</span>
+    </div>
+    <p class="sec-desc reveal">
+      从生产级 AI 设计平台抽离、脱敏、重构的通用方案 —— 附完整测试、CI 与可运行 demo。
+      「能把踩过的坑沉淀成别人能用的东西」，是我对工程价值的理解。
+    </p>
+
+    <div class="featured reveal">
+      <div class="top">
+        <div>
+          <h3>agent-sse-gateway<span class="tag">主打作品</span></h3>
+          <div class="repourl">
+            github.com/<a href="https://github.com/yyu-wang/agent-sse-gateway" target="_blank" rel="noopener">yyu-wang/agent-sse-gateway</a>
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge pass">CI ✓ passing</span>
+          <span class="badge">27 unit tests</span>
+          <span class="badge">TypeScript strict</span>
+          <span class="badge">核心零框架依赖</span>
+          <span class="badge">MIT</span>
+        </div>
+      </div>
+      <div class="cols">
+        <div class="col">
+          <h4>// 解决什么问题</h4>
+          <p>
+            接 AI 能力的前端有两类脏活：<b>供应商 SSE 协议不一致</b>（每接一家改一遍 UI）、
+            <b>多模型并行生图乱序返回</b>（图片位置随返回顺序跳动）。
+            本仓库把这两类问题的解法沉淀为可独立使用的模块。
+          </p>
+          <h4>// 核心设计</h4>
+          <ul>
+            <li><b>双层解析架构</b>：OpenAI 扁平 chunk / Agent 嵌套 delta / 大写扁平事件三种协议，归一化为一套 <b>AgentStreamEvent</b> —— 新增供应商 UI 层零改动</li>
+            <li><b>槽位调度器</b>：start 预占位 + 乱序回填 + 通道内游标，comfyui / gemini / gpt 三通道并行布局稳定不跳动</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>// 生产踩坑沉淀</h4>
+          <ul>
+            <li>完成判定<b>只能</b>由 <b>event:complete</b> 触发 —— model_result 的 isLast 只代表单通道结束</li>
+            <li><b>幽灵请求治理</b>：generation 计数器，被取代的旧流迟到帧不污染新任务</li>
+            <li>取消 ≠ 清空：已出图保留 / 未出图标记已取消，三种终态互不覆盖</li>
+            <li>mock SSE 服务器真实时序模拟，<b>零后端</b>即可完整体验 demo</li>
+          </ul>
+          <h4>// 工程质量</h4>
+          <ul>
+            <li>vitest 27 个单测覆盖协议解析与调度状态机</li>
+            <li>GitHub Actions：typecheck + test + build 全绿</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="repo-row reveal">
+      <div class="repo-card">
+        <div class="rh">
+          <h3>fileMind</h3>
+          <span class="lang">Rust · TypeScript</span>
+        </div>
+        <p>
+          桌面端文件整理工具，带 <b>RAG 问答</b>：Tauri 2 + React 19 壳层，Python FastAPI Sidecar
+          承担向量检索，本地文件即知识库 —— 一次跨端 + AI 检索的全栈实践。
+        </p>
+        <div class="stack">Tauri 2 · React 19 · FastAPI · RAG</div>
+      </div>
+      <a class="repo-card" href="https://github.com/yyu-wang/fileMind" target="_blank" rel="noopener">
+        <div class="rh"><h3>查看仓库 →</h3></div>
+        <p>github.com/yyu-wang/fileMind</p>
+        <div class="stack">Tauri 2 · React 19 · FastAPI Sidecar</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= projects ================= -->
+<section class="block" id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">02</span><h2>生产案例</h2><span class="en">Case Studies</span>
+    </div>
+    <p class="sec-desc reveal">
+      企业生产环境的项目 —— 因商业保密不开放源码，以下为关键技术决策与真实结果数字。
+    </p>
+
+    <div class="proj reveal">
+      <div class="ph">
+        <h3>丽境 · 百丽 AI 设计平台</h3><span class="role">前端核心开发</span>
+        <span class="date">2026.01 – 2026.07</span>
+      </div>
+      <p class="sum">
+        「AI 对话 → 智能生图 → 图像编辑 → 趋势洞察」全链路 AI 创作引擎，对接 Gemini、BetterYeah 等多模态大模型，服务鞋服箱包行业设计师。
+        <span class="hl">AI 功能日均调用超万次</span>
+      </p>
+      <ul>
+        <li>设计<b>多协议 SSE 流式网关</b>（双层解析架构），统一 Knodo / AgentPro BTY / 斑头雁三种 Agent 协议差异，映射为标准 <b>AgentStreamEvent</b> 事件模型，新增供应商 UI 层零改动 —— 即上方开源作品的生产原型</li>
+        <li>自主研发<b>多模型并行生图调度器</b>：comfyui / gemini / gpt 并行生成、SSE 逐帧智能分槽（预占位 + 结果分发 + 兜底结束）、用户取消状态机；统一请求工厂复用于 <b>8+ 生图场景</b></li>
+        <li>构建 <b>Agent 工具编排体系</b>：联网搜索、知识库 RAG 检索、热门笔记、趋势报告、AI 生图多工具并发执行，工具胶囊按 tool_id 实时聚合</li>
+        <li><b>onnxruntime-web 端侧推理</b>运行 Segment Anything：点击分割 → SVG 蒙版 → 驱动 AI 局部重绘，交互零网络延迟；配套 Canvas 标注引擎（画笔 / 撤销重做 / DPR 高清）</li>
+        <li>Fabric.js 编辑器插件体系支撑海报编辑与 <b>AI PPT 工作台</b>；Three.js 3D 模型在线预览；流式 Markdown / LaTeX 高精度渲染</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Vue 3</span><span class="chip">TypeScript</span><span class="chip">SSE</span><span class="chip">Canvas 2D</span><span class="chip">Fabric.js</span><span class="chip">Three.js</span><span class="chip">onnxruntime-web</span>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="ph">
+        <h3>EduGPT · AI 教育平台</h3><span class="role">前端负责人</span>
+        <span class="date">2024.01 – 2025.03</span>
+      </div>
+      <p class="sum">「备课 – 授课 – 作业 – 学情」全链路 AI 教学平台，管理后台 + 学生客户端双端系统。</p>
+      <ul>
+        <li><b>SSE 流式对话系统</b>：逐字输出、Markdown + LaTeX 实时渲染（转义规范化）、断线自动重连，弱网对话不中断</li>
+        <li><b>AI 绘画引擎</b>：文生图双模式，16 种学科风格模板 + 并发排队机制平滑处理请求洪峰</li>
+        <li>Konva.js 智能课件画布：毫秒级双向同步 + Undo/Redo 命令栈，一键生成带语音课件（MP4 / PDF 导出）</li>
+        <li>百度云 OCR 拍照录题全流程：客观题自动评分、主观题辅助批改，作业处理效率提升 <span class="hl">50%</span></li>
+        <li>TypeScript 泛型驱动 ProTable 配置化引擎（76+ 组件自动注册），后台开发效率提升 <span class="hl">60%</span>；中 / 英 / 繁三语言国际化</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Vue 3</span><span class="chip">Pinia</span><span class="chip">SSE</span><span class="chip">Konva.js</span><span class="chip">KaTeX</span><span class="chip">百度云 OCR</span>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="ph">
+        <h3>百企 · 商品经营数据平台</h3><span class="role">前端核心开发</span>
+        <span class="date">2025.11 – 2026.02</span>
+      </div>
+      <p class="sum">百丽集团三大业务线企业级数据可视化平台，同架构复用交付姊妹产品「丽构」。</p>
+      <ul>
+        <li><b>LeaferJS 脑图渲染引擎</b>：两阶段布局算法（后序算尺寸 + 前序定位置），万级节点流畅渲染，替代图表库减少约 <span class="hl">60% 包体积</span></li>
+        <li>万级商品列表<b>虚拟滚动</b>：DOM 节点降至 20 个以下、滚动稳定 60fps；5 级级联筛选以序列号 + AbortController 解决异步竞态覆盖</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Vue 3.5</span><span class="chip">LeaferJS</span><span class="chip">VChart</span><span class="chip">@tanstack/vue-virtual</span>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="ph">
+        <h3>长青老龄大学信息化平台</h3><span class="role">前端组长</span>
+        <span class="date">2022.12 – 2023.09</span>
+      </div>
+      <p class="sum">老年教育数字化平台，Web 管理后台 + 微信小程序双端，支撑 10,000+ 学员日常教学。</p>
+      <ul>
+        <li><b>JSON Schema 低代码表单引擎</b>：一份配置生成表格列 / 搜索项 / 表单字段，单页开发效率提升 <span class="hl">60%</span></li>
+        <li>SparkMD5 分片上传 + 断点续传，课件上传成功率 70% → <span class="hl">99%</span>；小程序首屏 3.5s → 1.8s；沉淀 30+ 组件与《表单配置化开发指南》</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Vue 3</span><span class="chip">Ant Design Vue</span><span class="chip">微信小程序原生</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= skills ================= -->
+<section class="block" id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">03</span><h2>能力矩阵</h2><span class="en">Capabilities</span>
+    </div>
+    <dl class="skills reveal">
+      <dt>AI 交互层</dt>
+      <dd><b>SSE 流式传输</b>（@microsoft/fetch-event-source）· 多供应商 Agent 协议适配 · 流式 Markdown / LaTeX 渲染 · 断线重连 / 取消状态机 / 幽灵请求治理</dd>
+      <dt>多模态与端侧</dt>
+      <dd>多模型并行生图调度 · Agent 工具编排（RAG 检索 / 联网搜索 / 生图）· <b>onnxruntime-web</b> 端侧推理（Segment Anything 点击分割）</dd>
+      <dt>框架与语言</dt>
+      <dd>Vue 2/3 全家桶 · TypeScript · Vite —— 响应式系统 / 虚拟 DOM Diff / 编译优化原理层理解</dd>
+      <dt>图形可视化</dt>
+      <dd>Canvas 2D · Fabric.js · Konva.js · LeaferJS · Three.js · ECharts / VChart</dd>
+      <dt>性能与工程化</dt>
+      <dd>虚拟滚动 · 包体积治理 · 竞态控制 · CI/CD · 组件库建设 · 低代码 / 配置化 · 微信小程序原生开发</dd>
+      <dt>AI 研发提效</dt>
+      <dd>Cursor / Claude Code 人机结对编程 · 项目级 Rules 与上下文管理 · Node.js（Nest）/ Go（Gin）协作认知</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= experience ================= -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">04</span><h2>工作经历</h2><span class="en">Experience</span>
+    </div>
+    <div class="xp reveal">
+      <div class="when">2025.09 – 2026.07</div>
+      <div>
+        <div class="where">深圳人瑞人力资源服务<span class="role">前端核心开发 · 驻场百丽时尚集团</span></div>
+        <p>驻场百丽期间负责 AI 设计平台「丽境」前端架构与核心研发，先后交付商品经营数据平台「百企」「丽构」；统一 Vue 3.5 + TypeScript + Vite 技术栈。</p>
+      </div>
+    </div>
+    <div class="xp reveal">
+      <div class="when">2024.01 – 2025.06</div>
+      <div>
+        <div class="where">深圳市高视维创意<span class="role">前端负责人</span></div>
+        <p>主导 EduGPT AI 教育平台双端系统前端架构，完成 AI 对话、AI 绘画、OCR 批改等 15+ 模块，团队并行开发效率提升 50%。</p>
+      </div>
+    </div>
+    <div class="xp reveal">
+      <div class="when">2022.06 – 2023.09</div>
+      <div>
+        <div class="where">深圳市布雷泽科技<span class="role">前端开发工程师</span></div>
+        <p>主导核心产品技术栈升级（Vue3 + TypeScript + Vite），交付长青老龄大学、金山 KOS 考试系统等多端项目。</p>
+      </div>
+    </div>
+    <div class="xp reveal">
+      <div class="when">2019.09 – 2022.06</div>
+      <div>
+        <div class="where">深圳市云游四海科技<span class="role">前端开发工程师</span></div>
+        <p>Vue2 + Element / ECharts 与微信小程序技术栈，负责页面搭建、组件封装、API 对接与性能优化。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= contact ================= -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">05</span><h2>联系与简历</h2><span class="en">Contact</span>
+    </div>
+    <p class="sec-desc reveal">
+      期望城市深圳，随时到岗。邮件是最快的方式；两份定位不同的简历按需取用。
+    </p>
+    <div class="contact-grid reveal">
+      <a class="contact-card" href="mailto:623272616@qq.com">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2.5A1.5 1.5 0 0 0 .5 4v8A1.5 1.5 0 0 0 2 13.5h12a1.5 1.5 0 0 0 1.5-1.5V4A1.5 1.5 0 0 0 14 2.5H2Zm-.06 1.47 6.3 4.42a1.3 1.3 0 0 0 1.52 0l6.3-4.42a.5.5 0 0 1 .44.9l-6.3 4.43a2.3 2.3 0 0 1-2.4 0L1.5 4.87a.5.5 0 0 1 .44-.9Z"/></svg>
+        <div><div class="cc-t">发邮件</div><div class="cc-s">623272616@qq.com</div></div>
+      </a>
+      <a class="contact-card" href="tel:17677127011">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 2.5A1.5 1.5 0 0 1 3 1h3.38a1.5 1.5 0 0 1 1.5 1.34l.28 2.87a1.5 1.5 0 0 1-1.06 1.57l-1.4.44a11.2 11.2 0 0 0 5.68 5.68l.44-1.4a1.5 1.5 0 0 1 1.57-1.06l2.87.28A1.5 1.5 0 0 1 15 12.62V16h-1.5c-6.9 0-12.5-5.6-12.5-12.5V2.5Z"/></svg>
+        <div><div class="cc-t">打电话</div><div class="cc-s">176-7712-7011</div></div>
+      </a>
+      <a class="contact-card dl" href="resume-ai.html">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a.75.75 0 0 1 .75.75v7.69l2.22-2.22a.75.75 0 1 1 1.06 1.06l-3.5 3.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.22 2.22V1.75A.75.75 0 0 1 8 1ZM2.5 12.75a.75.75 0 0 1 .75-.75h9.5a.75.75 0 0 1 0 1.5h-9.5a.75.75 0 0 1-.75-.75Z"/></svg>
+        <div><div class="cc-t">简历 · AI 应用方向</div><div class="cc-s">SSE / Agent / 生图调度 / 端侧推理</div></div>
+      </a>
+      <a class="contact-card dl" href="resume-general.html">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a.75.75 0 0 1 .75.75v7.69l2.22-2.22a.75.75 0 1 1 1.06 1.06l-3.5 3.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.22 2.22V1.75A.75.75 0 0 1 8 1ZM2.5 12.75a.75.75 0 0 1 .75-.75h9.5a.75.75 0 0 1 0 1.5h-9.5a.75.75 0 0 1-.75-.75Z"/></svg>
+        <div><div class="cc-t">简历 · 通用资深前端</div><div class="cc-s">B 端架构 / 性能优化 / 图形可视化 / 工程化</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>王嵛 · 资深前端开发工程师（AI 应用方向）</span>
+    <code>portfolio · 单文件 · 零依赖</code>
+    <span class="fin">// stream: completed ✓</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- SSE 流式终端演示 ---------- */
+  var demo = document.getElementById('sse-demo');
+
+  var script = [
+    { ev: 'request',  text: 'POST /v1/agent/chat → text/event-stream' },
+    { ev: 'thinking', text: '访客想快速了解这位工程师，检索能力画像…' },
+    { ev: 'tool',     text: '联网搜索 ✓ 命中 3 篇 · 知识库 RAG ✓ TOP 0.92' },
+    { ev: 'answer',   text: '7 年前端，近两年专注 AI 应用层：', type: true },
+    { ev: 'answer',   text: '多协议 SSE 网关 / 并行生图调度 / 端侧推理。', type: true },
+    { ev: 'answer',   text: '向下滚动，看这些能力如何落地为生产代码。', type: true },
+    { ev: 'done',     text: '✓ stream completed · 6 events in 2.1s' }
+  ];
+
+  function line() {
+    var el = document.createElement('div');
+    el.className = 'ln';
+    return el;
+  }
+
+  function renderStatic() {
+    script.forEach(function (item) {
+      var el = line();
+      el.innerHTML = item.ev === 'request'
+        ? '<span class="cmd">$ ' + item.text + '</span>'
+        : '<span class="ev">↓ event: ' + item.ev + '</span>  <span class="txt">' + item.text + '</span>';
+      demo.appendChild(el);
+    });
+  }
+
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+  function typeInto(el, fullText, speed) {
+    return new Promise(function (resolve) {
+      var i = 0;
+      var caret = document.createElement('span');
+      caret.className = 'caret';
+      el.appendChild(caret);
+      (function tick() {
+        if (i < fullText.length) {
+          caret.insertAdjacentText('beforebegin', fullText.charAt(i));
+          i += 1;
+          setTimeout(tick, speed);
+        } else {
+          caret.remove();
+          resolve();
+        }
+      })();
+    });
+  }
+
+  async function play() {
+    await sleep(900);
+    for (var k = 0; k < script.length; k++) {
+      var item = script[k];
+      var el = line();
+      if (item.ev === 'request') {
+        el.innerHTML = '<span class="cmd">$ ' + item.text + '</span>';
+        demo.appendChild(el);
+        await sleep(500);
+      } else if (item.type) {
+        var span = document.createElement('span');
+        span.className = 'ev';
+        span.textContent = '↓ event: ' + item.ev + '  ';
+        el.appendChild(span);
+        var txt = document.createElement('span');
+        txt.className = 'txt';
+        el.appendChild(txt);
+        demo.appendChild(el);
+        await typeInto(txt, item.text, 34);
+        await sleep(180);
+      } else {
+        var cls = item.ev === 'done' ? 'ok' : (item.ev === 'thinking' ? 'ev dim' : 'ev');
+        var label = item.ev === 'done' ? '' : '↓ event: ' + item.ev;
+        el.innerHTML = label
+          ? '<span class="' + cls + '">' + label + '</span>  <span class="txt">' + item.text + '</span>'
+          : '<span class="ok">' + item.text + '</span>';
+        demo.appendChild(el);
+        await sleep(item.ev === 'thinking' ? 850 : 420);
+      }
+    }
+  }
+
+  if (reduced) { renderStatic(); } else { play(); }
+
+  /* ---------- 滚动显现 ---------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduced || !('IntersectionObserver' in window)) {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- 导航 scroll spy ---------- */
+  var navLinks = document.querySelectorAll('nav .links a');
+  var sections = [];
+  navLinks.forEach(function (a) {
+    var id = a.getAttribute('href').slice(1);
+    var sec = document.getElementById(id);
+    if (sec) sections.push({ link: a, sec: sec });
+  });
+
+  function spy() {
+    var pos = window.scrollY + 120;
+    var current = null;
+    sections.forEach(function (s) { if (s.sec.offsetTop <= pos) current = s; });
+    navLinks.forEach(function (a) { a.classList.remove('active'); });
+    if (current) current.link.classList.add('active');
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+})();
+</script>
+</body>
+</html>
