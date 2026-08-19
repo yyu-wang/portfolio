@@ -187,6 +187,10 @@
         <div class="date">2025.09 – 2026.07</div>
       </div>
       <div class="sum">驻场百丽期间负责 AI 设计平台「丽境」前端架构与核心模块研发，先后交付商品经营数据平台「百企」「丽构」；统一 Vue 3.5 + TypeScript + Vite 技术栈。</div>
+      <ul class="bul">
+        <li>主导「丽境」AI 设计平台前端建设：多协议 SSE 流式网关、多模型并行生图调度、onnxruntime-web 端侧推理等核心能力从 0 到 1 落地，上线后 AI 功能<b>日均调用超万次</b></li>
+        <li>统一技术栈并主导架构设计，与后端协同定义 SSE 协议规范，保障 3 家 Agent 供应商平滑接入；交付百企 / 丽构两大经营数据平台并沉淀跨产品复用模板</li>
+      </ul>
     </div>
 
     <div class="entry">
@@ -203,6 +207,10 @@
         <div class="date">2023.12 – 2025.04</div>
       </div>
       <div class="sum">主导 EduGPT AI 教育平台双端系统（管理后台 + 学生客户端）前端架构与核心开发；完成 AI 对话、AI 绘画、OCR 智能批改、题库组卷等 15+ 模块，团队并行开发效率提升 50%。</div>
+      <ul class="bul">
+        <li>负责前端小组<b>任务拆分、代码评审与技术方案决策</b>，推动 Vue3 + TypeScript + Vite 技术栈落地，按业务域拆分 15+ 独立模块支撑团队并行开发</li>
+        <li>主导 SSE 流式对话、OCR 拍照录题、智能课件画布等 AI 核心能力的前端实现，沉淀 ProTable 配置化引擎等可复用基建</li>
+      </ul>
     </div>
 
     <div class="entry">
@@ -211,6 +219,10 @@
         <div class="date">2022.06 – 2023.09</div>
       </div>
       <div class="sum">主导公司核心产品技术栈升级（Vue3 + TypeScript + Vite），交付长青老龄大学、金山 KOS 考试系统等小程序 / H5 / PC 多端项目，全部按时高质量交付。</div>
+      <ul class="bul">
+        <li>担任长青老龄大学项目<b>前端组长</b>：搭建 JSON Schema 低代码表单引擎、分片上传、动态路由 RBAC 等基建，16 个业务模块 + 96 个页面小程序双端交付</li>
+        <li>主导 Vue2 → Vue3 / TS / Vite 渐进式迁移（业务零中断），沉淀 30+ 可复用组件与《表单配置化开发指南》</li>
+      </ul>
     </div>
 
     <div class="entry">
@@ -219,6 +231,10 @@
         <div class="date">2019.09 – 2022.06</div>
       </div>
       <div class="sum">基于 Vue2 + Element / ECharts 与微信小程序技术栈，负责页面搭建、组件封装、RESTful API 对接与性能优化。</div>
+      <ul class="bul">
+        <li>负责多端业务页面开发与通用组件封装，沉淀列表 / 表单 / 图表等高频组件提升交付效率</li>
+        <li>主导首屏加载与渲染性能优化（路由懒加载、资源加载与缓存策略），核心页面首屏耗时明显下降</li>
+      </ul>
     </div>
   </section>
 
@@ -247,6 +263,24 @@
 
     <div class="entry">
       <div class="entry-head">
+        <div class="t">百企 · 商品经营数据平台<span class="sub"> · 前端核心开发</span></div>
+        <div class="date">2025.11 – 2026.02</div>
+      </div>
+      <div class="sum">百丽集团商品 / 行业 / 供应链三大业务线的企业级数据可视化平台（品类结构概览 / 行业对比 / 商品经营 / 供应链分析四大面板），支撑核心业务部门日常经营决策。</div>
+      <div class="chips">
+        <span class="chip">Vue 3.5</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Pinia</span><span class="chip">Element Plus</span><span class="chip">LeaferJS</span><span class="chip">VChart</span><span class="chip">ECharts</span><span class="chip">@tanstack/vue-virtual</span><span class="chip">VueUse</span><span class="chip">axios</span><span class="chip">神策埋点</span>
+      </div>
+      <ul class="bul">
+        <li><b>LeaferJS 脑图渲染引擎</b>：两阶段布局算法（后序遍历计算尺寸 + 前序遍历确定位置）+ 布局 / 渲染 / 交互职责分离架构，支持按层级动态切换子节点横竖排布、L 型连接线与层级容器渲染、宽图自适应缩放，支撑万级节点流畅渲染，替代传统图表库减少约 <span class="hl">60% 包体积</span></li>
+        <li>万级商品图片网格<b>行列混合虚拟滚动</b>：按容器宽度动态计算每行列数、measureElement 实测修正行高、图片懒加载联动，DOM 节点降至 20 个以下、滚动稳定 60fps；5 级级联筛选以 createSharedComposable + 序列号 + AbortController 解决异步竞态覆盖</li>
+        <li>自研<b>品类结构树表格</b>：三层动态表头（指标 → 时间分组 → 值/占比）、递归 rowspan 单元格合并、季节父项跨行聚合，支持表头排序与指标列显隐偏好配置</li>
+        <li>封装 Axios 请求层：SSO 无感认证刷新（524 / 525 / 401 统一重登）、状态码集中治理、防抖防重入；集成神策埋点实现用户行为全链路追踪</li>
+        <li><b>构建治理</b>：manualChunks 按业务域分包压缩首屏体积，resolve.dedupe 解决 LeaferJS 多 chunk 重复打包导致的画布渲染异常，线上疑难问题从构建层根治</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
         <div class="t">EduGPT · AI 教育平台<span class="sub"> · 前端负责人</span></div>
         <div class="date">2024.01 – 2025.03</div>
       </div>
@@ -261,24 +295,6 @@
         <li>基于 Konva.js 搭建<b>智能课件画布</b>：元素自由拖拽 / 旋转缩放 / 层级调整 + Undo/Redo 命令栈，配置教学资源一键生成带语音讲解课件（MP4 / PDF 导出）</li>
         <li>打通<b>百度云 OCR 拍照录题</b>全流程：客观题自动评分、主观题辅助批改，作业处理效率提升 <span class="hl">50%</span>；组卷系统融合标签化题库与协同过滤算法智能推荐</li>
         <li>TypeScript 泛型驱动 ProTable 配置化引擎（76+ 组件自动注册，配置效率提升 <span class="hl">60%</span>）；完成 AI 对话 / 绘画 / 题库 / 学情等 15+ 模块与中 / 英 / 繁三语言国际化</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <div class="t">百企 · 商品经营数据平台<span class="sub"> · 前端核心开发</span></div>
-        <div class="date">2025.11 – 2026.02</div>
-      </div>
-      <div class="sum">百丽集团商品 / 行业 / 供应链三大业务线的企业级数据可视化平台（品类结构概览 / 行业对比 / 商品经营 / 供应链分析四大面板），支撑核心业务部门日常经营决策。</div>
-      <div class="chips">
-        <span class="chip">Vue 3.5</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Pinia</span><span class="chip">Element Plus</span><span class="chip">LeaferJS</span><span class="chip">VChart</span><span class="chip">ECharts</span><span class="chip">@tanstack/vue-virtual</span><span class="chip">VueUse</span><span class="chip">axios</span><span class="chip">神策埋点</span>
-      </div>
-      <ul class="bul">
-        <li><b>LeaferJS 脑图渲染引擎</b>：两阶段布局算法（后序遍历计算尺寸 + 前序遍历确定位置）+ 布局 / 渲染 / 交互职责分离架构，支持按层级动态切换子节点横竖排布、L 型连接线与层级容器渲染、宽图自适应缩放，支撑万级节点流畅渲染，替代传统图表库减少约 <span class="hl">60% 包体积</span></li>
-        <li>万级商品图片网格<b>行列混合虚拟滚动</b>：按容器宽度动态计算每行列数、measureElement 实测修正行高、图片懒加载联动，DOM 节点降至 20 个以下、滚动稳定 60fps；5 级级联筛选以 createSharedComposable + 序列号 + AbortController 解决异步竞态覆盖</li>
-        <li>自研<b>品类结构树表格</b>：三层动态表头（指标 → 时间分组 → 值/占比）、递归 rowspan 单元格合并、季节父项跨行聚合，支持表头排序与指标列显隐偏好配置</li>
-        <li>封装 Axios 请求层：SSO 无感认证刷新（524 / 525 / 401 统一重登）、状态码集中治理、防抖防重入；集成神策埋点实现用户行为全链路追踪</li>
-        <li><b>构建治理</b>：manualChunks 按业务域分包压缩首屏体积，resolve.dedupe 解决 LeaferJS 多 chunk 重复打包导致的画布渲染异常，线上疑难问题从构建层根治</li>
       </ul>
     </div>
 
