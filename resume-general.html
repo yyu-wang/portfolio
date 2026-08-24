@@ -68,7 +68,7 @@
   .kv dd b { font-weight: 700; color: var(--accent); }
 
   /* ---------- entries ---------- */
-  .entry { margin-bottom: 16px; break-inside: avoid; page-break-inside: avoid; }
+  .entry { margin-bottom: 16px; }
   .entry:last-child { margin-bottom: 0; }
   .entry-head { display: flex; align-items: baseline; gap: 10px; }
   .entry-head .t { font-size: 14px; font-weight: 700; }
@@ -113,6 +113,12 @@
     .page { max-width: none; margin: 0; padding: 0; box-shadow: none; }
     section { margin-top: 18px; }
     .entry { margin-bottom: 12px; }
+    h2.sec { break-after: avoid; page-break-after: avoid; }
+    .entry-head { break-after: avoid; page-break-after: avoid; }
+    .entry .sum { break-after: avoid; page-break-after: avoid; orphans: 2; widows: 2; }
+    .chips { break-before: avoid; page-break-before: avoid; }
+    ul.bul li { break-inside: avoid; page-break-inside: avoid; }
+    .kv dt, .kv dd { break-inside: avoid; page-break-inside: avoid; }
   }
   @page { size: A4; margin: 13mm 12mm; }
 </style>
