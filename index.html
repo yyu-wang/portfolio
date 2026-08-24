@@ -572,7 +572,7 @@
       <p class="sum">百丽集团三大业务线企业级数据可视化平台，同架构复用交付姊妹产品「丽构」。</p>
       <ul>
         <li><b>LeaferJS 脑图渲染引擎</b>：两阶段布局算法（后序算尺寸 + 前序定位置），万级节点流畅渲染，替代图表库减少约 <span class="hl">60% 包体积</span></li>
-        <li>万级商品列表<b>虚拟滚动</b>：DOM 节点降至 20 个以下、滚动稳定 60fps；5 级级联筛选以序列号 + AbortController 解决异步竞态覆盖</li>
+        <li>万级商品列表<b>虚拟滚动</b>：同时挂载虚拟行 < 20、总 DOM 从数万降至数百、滚动稳定 60fps；5 级级联筛选以序列号 + AbortController 解决异步竞态覆盖</li>
       </ul>
       <div class="chips">
         <span class="chip">Vue 3.5</span><span class="chip">LeaferJS</span><span class="chip">VChart</span><span class="chip">@tanstack/vue-virtual</span>

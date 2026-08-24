@@ -269,7 +269,7 @@
       </div>
       <ul class="bul">
         <li><b>LeaferJS 脑图渲染引擎</b>：两阶段布局算法（后序遍历计算尺寸 + 前序遍历确定位置）+ 布局 / 渲染 / 交互职责分离架构，支持按层级动态切换子节点横竖排布、L 型连接线与层级容器渲染、宽图自适应缩放，支撑万级节点流畅渲染，替代传统图表库包体积减少超一半</li>
-        <li>万级商品图片网格<b>行列混合虚拟滚动</b>：按容器宽度动态计算每行列数、measureElement 实测修正行高、图片懒加载联动，DOM 节点降至 20 个以下、滚动稳定 60fps；5 级级联筛选以 createSharedComposable + 序列号 + AbortController 解决异步竞态覆盖</li>
+        <li>万级商品图片网格<b>按行虚拟滚动</b>：按容器宽度动态计算每行列数、虚拟化单位为行（可视区 + overscan 稳定挂载 15~20 行，行内固定多列）、measureElement 实测修正行高、图片懒加载联动，总 DOM 从全量数万节点降至数百级、滚动稳定 60fps；5 级级联筛选以 createSharedComposable + 序列号 + AbortController 解决异步竞态覆盖</li>
         <li>自研<b>品类结构树表格</b>：三层动态表头（指标 → 时间分组 → 值/占比）、递归 rowspan 单元格合并、季节父项跨行聚合，支持表头排序与指标列显隐偏好配置</li>
         <li><b>构建治理</b>：manualChunks 按业务域分包压缩首屏体积，resolve.dedupe 解决 LeaferJS 多 chunk 重复打包导致的画布渲染异常，线上疑难问题从构建层根治</li>
       </ul>
