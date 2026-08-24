@@ -193,14 +193,6 @@
 
     <div class="entry">
       <div class="entry-head">
-        <div class="t">同方鼎欣科技股份有限公司 · 前端开发工程师</div>
-        <div class="date">2025.04 – 2025.07</div>
-      </div>
-      <div class="sum">负责晓星课堂 AI 项目创作中心模块重构与性能优化，提升交互体验与可扩展性。</div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
         <div class="t">深圳市高视维创意有限公司 · 前端负责人</div>
         <div class="date">2023.12 – 2025.04</div>
       </div>
@@ -214,13 +206,23 @@
     <div class="entry">
       <div class="entry-head">
         <div class="t">深圳市布雷泽科技有限公司 · 前端开发工程师</div>
-        <div class="date">2019.09 – 2023.09</div>
+        <div class="date">2022.06 – 2023.09</div>
       </div>
-      <div class="sum">主导核心产品技术栈升级（Vue2 → Vue3 + TypeScript + Vite）与多端业务交付，覆盖长青老龄大学、金山 KOS 考试系统等小程序 / H5 / PC 项目，全部按时高质量交付。</div>
+      <div class="sum">主导公司核心产品技术栈升级（Vue3 + TypeScript + Vite），交付长青老龄大学、金山 KOS 考试系统等小程序 / H5 / PC 多端项目，全部按时高质量交付。</div>
       <ul class="bul">
-        <li>主导 Vue2 → Vue3 / TS / Vite 渐进式迁移（业务零中断），沉淀 30+ 可复用组件与《表单配置化开发指南》</li>
         <li>担任长青老龄大学项目<b>前端组长</b>：搭建 JSON Schema 低代码表单引擎、分片上传、动态路由 RBAC 等基建，16 个业务模块 + 96 个页面小程序双端交付</li>
-        <li>基于 Vue2 + Element / ECharts 与微信小程序完成多端业务交付，封装列表 / 表单 / 图表等高频组件提升交付效率</li>
+        <li>主导 Vue2 → Vue3 / TS / Vite 渐进式迁移（业务零中断），沉淀 30+ 可复用组件与《表单配置化开发指南》</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="t">深圳市云游四海科技有限公司 · 前端开发工程师</div>
+        <div class="date">2019.09 – 2022.06</div>
+      </div>
+      <div class="sum">基于 Vue2 + Element / ECharts 与微信小程序技术栈，负责页面搭建、组件封装、RESTful API 对接与性能优化。</div>
+      <ul class="bul">
+        <li>负责多端业务页面开发与通用组件封装，沉淀列表 / 表单 / 图表等高频组件提升交付效率</li>
         <li>主导首屏加载与渲染性能优化（路由懒加载、资源加载与缓存策略），核心页面首屏耗时明显下降</li>
       </ul>
     </div>
@@ -255,14 +257,13 @@
       </div>
       <div class="sum">百丽集团三大业务线看数分散、决策依赖人工报表——构建企业级商品经营数据可视化平台，支撑核心业务部门日常经营决策；同架构复用交付姊妹产品「丽构」。<span class="badge">支撑百丽集团三大业务线经营决策</span></div>
       <div class="chips">
-        <span class="chip">Pinia</span><span class="chip">LeaferJS</span><span class="chip">VChart</span><span class="chip">ECharts</span><span class="chip">@tanstack/vue-virtual</span><span class="chip">神策埋点</span>
+        <span class="chip">Pinia</span><span class="chip">LeaferJS</span><span class="chip">VChart</span><span class="chip">ECharts</span><span class="chip">@tanstack/vue-virtual</span>
       </div>
       <ul class="bul">
         <li><b>LeaferJS 脑图渲染引擎</b>：策略模式分离布局（LayoutEngine）/ 渲染（MindMapRenderer）/ 画布交互（AppManager）职责，两阶段布局算法（后序遍历计算尺寸 + 前序遍历确定位置）、按层级动态切换子节点横竖排布与 L 型连接线渲染，支撑万级节点流畅渲染，替代传统图表库包体积减少超一半</li>
         <li>万级商品图片网格<b>行列混合虚拟滚动</b>：按容器宽度动态计算每行列数 + measureElement 实测修正行高 + 图片懒加载联动，DOM 节点降至 20 个以下，滚动稳定 <span class="hl">60fps</span>；ResizeObserver + 防抖处理滚动边距补偿</li>
         <li>自研<b>品类结构树表格</b>：三层动态表头（指标 → 时间分组 → 值/占比）、递归 rowspan 单元格合并、季节父项跨行聚合，支持表头排序与指标列显隐偏好配置</li>
         <li>基于 createSharedComposable 设计<b>跨面板共享筛选状态架构</b>，序列号 + AbortController 解决 5 级级联筛选（品牌→年份/季节→渠道→指标→多级属性）竞态覆盖难题</li>
-        <li>封装 Axios 请求层：SSO 无感认证刷新（524 / 525 / 401 统一重登）、状态码集中治理、防抖防重入；集成神策埋点实现用户行为全链路追踪</li>
         <li>manualChunks 分包 + resolve.dedupe 解决 LeaferJS 多 chunk 重复打包导致的画布渲染异常；封装 VChart 图表组件库（9 种图表）统一空态与销毁管理</li>
       </ul>
     </div>
@@ -326,7 +327,7 @@
     <div class="entry">
       <div class="entry-head">
         <div class="t">agent-sse-gateway<span class="sub"> · 多协议 SSE 网关与生图调度器 · 开源</span></div>
-        <div class="date">2026.08 – 至今</div>
+        <div class="date">2026</div>
       </div>
       <div class="sum"><a href="https://github.com/yyu-wang/agent-sse-gateway">github.com/yyu-wang/agent-sse-gateway</a> —— 从生产代码抽离重构的零框架依赖 TypeScript 库</div>
       <div class="chips">
