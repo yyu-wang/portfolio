@@ -314,7 +314,6 @@
   <div class="bar">
     <span class="logo">wangyu<em>.dev</em></span>
     <div class="links">
-      <a href="#work">开源作品</a>
       <a href="#projects">生产案例</a>
       <a href="#skills">能力</a>
       <a href="#experience">经历</a>
@@ -336,7 +335,7 @@
       <div class="pos">把大模型能力，做成稳定、流畅、可维护的前端产品</div>
       <p class="thesis">
         主攻 <b>SSE 流式交互</b>、<b>Agent 工具编排</b>、<b>多模态生图调度</b>与<b>端侧 AI 推理</b>；
-        兼具 B 端复杂系统架构与极致性能优化的工程底座，也能独立完成全栈与跨端产品交付（见下方 fileMind 与 Marketing Wise）。
+        兼具 B 端复杂系统架构与极致性能优化的工程底座，也能独立完成全栈与跨端产品交付。
         曾主导百丽 AI 设计平台「丽境」前端建设，AI 功能日均调用超万次。
       </p>
       <div class="stats">
@@ -350,176 +349,22 @@
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 2.5A1.5 1.5 0 0 1 3 1h3.38a1.5 1.5 0 0 1 1.5 1.34l.28 2.87a1.5 1.5 0 0 1-1.06 1.57l-1.4.44a11.2 11.2 0 0 0 5.68 5.68l.44-1.4a1.5 1.5 0 0 1 1.57-1.06l2.87.28A1.5 1.5 0 0 1 15 12.62V16h-1.5c-6.9 0-12.5-5.6-12.5-12.5V2.5Z"/></svg>
           联系我
         </a>
-        <a class="btn" href="#work">看开源作品 ↓</a>
+        <a class="btn" href="#projects">看生产案例 ↓</a>
       </div>
     </div>
 
     <div class="terminal" aria-label="SSE 流式事件演示">
-      <div class="tbar"><i></i><i></i><i></i><span>agent-sse-gateway · demo</span></div>
+      <div class="tbar"><i></i><i></i><i></i><span>SSE 流式事件 · demo</span></div>
       <div class="tbody" id="sse-demo"></div>
     </div>
   </div>
 </header>
 
-<!-- ================= open source ================= -->
-<section class="block" id="work">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="idx">01</span><h2>开源作品</h2><span class="en">Open Source</span>
-    </div>
-    <p class="sec-desc reveal">
-      从生产级 AI 设计平台抽离、脱敏、重构的通用方案 —— 附完整测试、CI 与可运行 demo。
-      「能把踩过的坑沉淀成别人能用的东西」，是我对工程价值的理解。
-    </p>
-
-    <div class="featured reveal">
-      <div class="top">
-        <div>
-          <h3>agent-sse-gateway<span class="tag">主打作品</span></h3>
-          <div class="repourl">
-            <a href="https://github.com/yyu-wang/agent-sse-gateway" target="_blank" rel="noopener">github.com/yyu-wang/agent-sse-gateway</a>
-          </div>
-        </div>
-        <div class="badges">
-          <span class="badge pass">CI ✓ passing</span>
-          <span class="badge">27 unit tests</span>
-          <span class="badge">TypeScript strict</span>
-          <span class="badge">核心零框架依赖</span>
-          <span class="badge">MIT</span>
-        </div>
-      </div>
-      <div class="cols">
-        <div class="col">
-          <h4>// 解决什么问题</h4>
-          <p>
-            接 AI 能力的前端有两类脏活：<b>供应商 SSE 协议不一致</b>（每接一家改一遍 UI）、
-            <b>多模型并行生图乱序返回</b>（图片位置随返回顺序跳动）。
-            本仓库把这两类问题的解法沉淀为可独立使用的模块。
-          </p>
-          <h4>// 核心设计</h4>
-          <ul>
-            <li><b>双层解析架构</b>：OpenAI 扁平 chunk / Agent 嵌套 delta / 大写扁平事件三种协议，归一化为一套 <b>AgentStreamEvent</b> —— 新增供应商 UI 层零改动</li>
-            <li><b>槽位调度器</b>：start 预占位 + 乱序回填 + 通道内游标，comfyui / gemini / gpt 三通道并行布局稳定不跳动</li>
-          </ul>
-        </div>
-        <div class="col">
-          <h4>// 生产踩坑沉淀</h4>
-          <ul>
-            <li>完成判定<b>只能</b>由 <b>event:complete</b> 触发 —— model_result 的 isLast 只代表单通道结束</li>
-            <li><b>幽灵请求治理</b>：generation 计数器，被取代的旧流迟到帧不污染新任务</li>
-            <li>取消 ≠ 清空：已出图保留 / 未出图标记已取消，三种终态互不覆盖</li>
-            <li>mock SSE 服务器真实时序模拟，<b>零后端</b>即可完整体验 demo</li>
-          </ul>
-          <h4>// 工程质量</h4>
-          <ul>
-            <li>vitest 27 个单测覆盖协议解析与调度状态机</li>
-            <li>GitHub Actions：typecheck + test + build 全绿</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="featured reveal" style="margin-top: 26px;">
-      <div class="top">
-        <div>
-          <h3>fileMind<span class="tag">持续开发中</span></h3>
-          <div class="repourl">
-            <a href="https://github.com/yyu-wang/fileMind" target="_blank" rel="noopener">github.com/yyu-wang/fileMind</a>
-          </div>
-        </div>
-        <div class="badges">
-          <span class="badge pass">● active</span>
-          <span class="badge">Tauri 2 · Rust 壳层</span>
-          <span class="badge">React 19</span>
-          <span class="badge">FastAPI Sidecar</span>
-          <span class="badge">RAG 向量检索</span>
-        </div>
-      </div>
-      <div class="cols">
-        <div class="col">
-          <h4>// 解决什么问题</h4>
-          <p>
-            本地文件越攒越多，找内容只能靠文件名与全文搜索，<b>存了 ≈ 找不到</b>。
-            fileMind 把「整理」和「提问」合并成一件事：<b>本地文件即知识库</b> ——
-            整理完直接语义问答，答案命中自己的文档内容。
-          </p>
-          <h4>// 跨语言三端架构</h4>
-          <ul>
-            <li><b>Rust 壳层</b>（Tauri 2）：文件系统访问、窗口管理与应用打包分发</li>
-            <li><b>React 19 前端</b>：文件整理交互与问答界面，TypeScript</li>
-            <li><b>Python FastAPI Sidecar</b>：向量检索服务，Rust 与 Python 进程通信完整跑通</li>
-          </ul>
-        </div>
-        <div class="col">
-          <h4>// 技术亮点</h4>
-          <ul>
-            <li><b>RAG 全链路自研</b>：本地文件解析 → 切片 → 向量化 → 语义问答，整条链路不依赖第三方服务</li>
-            <li><b>本地优先</b>：文件与向量数据全部留在本机，隐私不出端</li>
-            <li><b>闭环工作流</b>：整理结果即知识源，「整理 → 提问 → 检索命中」一条链路</li>
-          </ul>
-          <h4>// 为什么值得看</h4>
-          <ul>
-            <li>比 Web 全栈多一层的跨端难题：<b>跨语言进程通信 + 桌面端打包分发</b>完整跑通</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="featured reveal" style="margin-top: 26px;">
-      <div class="top">
-        <div>
-          <h3>Marketing Wise<span class="tag">全栈 · 在线运行</span></h3>
-          <div class="repourl">
-            <a href="https://github.com/yyu-wang/marketing" target="_blank" rel="noopener">github.com/yyu-wang/marketing</a>
-            · <a href="https://wying.club/" target="_blank" rel="noopener">https://wying.club</a>（在线体验，需 VPN）
-          </div>
-        </div>
-        <div class="badges">
-          <span class="badge pass">● online</span>
-          <span class="badge">Monorepo 三端</span>
-          <span class="badge">SSE 流式</span>
-          <span class="badge">CI/CD 自动部署</span>
-        </div>
-      </div>
-      <div class="cols">
-        <div class="col">
-          <h4>// 是什么</h4>
-          <p>
-            AI 驱动的营销文案生成工具，<b>独立完成的完整产品</b>：用户输入产品与受众，
-            AI 生成小红书 / 朋友圈 / 广告语等多渠道文案，支持 SSE 流式输出、多轮对话、
-            文案管理与数据看板。<b>前后端 + 数据库 + 部署全链路交付</b>。
-          </p>
-          <h4>// 三端架构</h4>
-          <ul>
-            <li><b>marketing-server</b>：NestJS 10 + TypeORM + MySQL + Redis，REST API 与 SSE 推流</li>
-            <li><b>marketing-web</b>：Vue 3 + Element Plus 用户端 SPA</li>
-            <li><b>marketing-admin</b>：React 19 + Ant Design 6 管理后台（用户 / Prompt 模板 / 敏感词）</li>
-          </ul>
-        </div>
-        <div class="col">
-          <h4>// 技术亮点</h4>
-          <ul>
-            <li><b>额度控制</b>：Redis Lua 脚本原子扣减 + MySQL 双写，每日自然日重置，并发下不超扣</li>
-            <li><b>SSE 流式输出</b>：文案逐字生成，多轮对话上下文保持，支持视觉模型图片理解</li>
-            <li><b>越权防护</b>：项目归属服务端校验，杜绝横向越权</li>
-            <li><b>CI/CD</b>：三条 GitHub Actions 工作流（server / web / admin）自动部署到自有服务器</li>
-          </ul>
-          <h4>// 工程文档</h4>
-          <ul>
-            <li>仓库内置 <b>PRD 需求规格</b>与开发指南（架构 / 分层 / 代码规范 / 数据库实体）</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- ================= projects ================= -->
 <section class="block" id="projects">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="idx">02</span><h2>生产案例</h2><span class="en">Case Studies</span>
+      <span class="idx">01</span><h2>生产案例</h2><span class="en">Case Studies</span>
     </div>
     <p class="sec-desc reveal">
       企业生产环境的项目 —— 因商业保密不开放源码，以下为关键技术决策与真实结果数字。
@@ -535,7 +380,7 @@
         <span class="hl">AI 功能日均调用超万次</span>
       </p>
       <ul>
-        <li>设计<b>多协议 SSE 流式网关</b>（双层解析架构），统一 Knodo / AgentPro BTY / 斑头雁三种 Agent 协议差异，映射为标准 <b>AgentStreamEvent</b> 事件模型，新增供应商 UI 层零改动 —— 即上方开源作品的生产原型</li>
+        <li>设计<b>多协议 SSE 流式网关</b>（双层解析架构），统一 Knodo / AgentPro BTY / 斑头雁三种 Agent 协议差异，映射为标准 <b>AgentStreamEvent</b> 事件模型，新增供应商 UI 层零改动</li>
         <li>自主研发<b>多模型并行生图调度器</b>：comfyui / gemini / gpt 并行生成、SSE 逐帧智能分槽（预占位 + 结果分发 + 兜底结束）、用户取消状态机；统一请求工厂复用于 <b>8+ 生图场景</b></li>
         <li>构建 <b>Agent 工具编排体系</b>：联网搜索、知识库 RAG 检索、热门笔记、趋势报告、AI 生图多工具并发执行，工具胶囊按 tool_id 实时聚合</li>
         <li><b>onnxruntime-web 端侧推理</b>运行 Segment Anything：点击分割 → SVG 蒙版 → 驱动 AI 局部重绘，交互零网络延迟；配套 Canvas 标注引擎（画笔 / 撤销重做 / DPR 高清）</li>
@@ -600,7 +445,7 @@
 <section class="block" id="skills">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="idx">03</span><h2>能力矩阵</h2><span class="en">Capabilities</span>
+      <span class="idx">02</span><h2>能力矩阵</h2><span class="en">Capabilities</span>
     </div>
     <dl class="skills reveal">
       <dt>框架与语言</dt>
@@ -623,7 +468,7 @@
 <section class="block" id="experience">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="idx">04</span><h2>工作经历</h2><span class="en">Experience</span>
+      <span class="idx">03</span><h2>工作经历</h2><span class="en">Experience</span>
     </div>
     <div class="xp reveal">
       <div class="when">2025.09 – 2026.07</div>
@@ -660,7 +505,7 @@
 <section class="block" id="contact">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="idx">05</span><h2>联系与简历</h2><span class="en">Contact</span>
+      <span class="idx">04</span><h2>联系与简历</h2><span class="en">Contact</span>
     </div>
     <p class="sec-desc reveal">
       期望城市深圳，随时到岗。邮件是最快的方式；三份定位不同的简历按需取用。
@@ -673,10 +518,6 @@
       <a class="contact-card" href="tel:17677127011">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 2.5A1.5 1.5 0 0 1 3 1h3.38a1.5 1.5 0 0 1 1.5 1.34l.28 2.87a1.5 1.5 0 0 1-1.06 1.57l-1.4.44a11.2 11.2 0 0 0 5.68 5.68l.44-1.4a1.5 1.5 0 0 1 1.57-1.06l2.87.28A1.5 1.5 0 0 1 15 12.62V16h-1.5c-6.9 0-12.5-5.6-12.5-12.5V2.5Z"/></svg>
         <div><div class="cc-t">打电话</div><div class="cc-s">176-7712-7011</div></div>
-      </a>
-      <a class="contact-card" href="https://wying.club/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M.75 2.5A.75.75 0 0 1 1.5 1.75h13a.75.75 0 0 1 .75.75v11a.75.75 0 0 1-.75.75h-13a.75.75 0 0 1-.75-.75v-11Zm1.5 1v9.25h11.5V3.5H2.25Zm2 2.25h7.5v1.5h-7.5v-1.5Zm0 3h5v1.5h-5v-1.5Z"/></svg>
-        <div><div class="cc-t">在线产品</div><div class="cc-s">https://wying.club（需 VPN）</div></div>
       </a>
       <a class="contact-card dl" href="resume-ai.html">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a.75.75 0 0 1 .75.75v7.69l2.22-2.22a.75.75 0 1 1 1.06 1.06l-3.5 3.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.22 2.22V1.75A.75.75 0 0 1 8 1ZM2.5 12.75a.75.75 0 0 1 .75-.75h9.5a.75.75 0 0 1 0 1.5h-9.5a.75.75 0 0 1-.75-.75Z"/></svg>
