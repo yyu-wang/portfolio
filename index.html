@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>王嵛 · AI Agent 全栈工程师 · 求职作品集</title>
-<meta name="description" content="AI Agent 全栈工程师。Agent 编排与流式交互、RAG 检索、电商中台与 ERP 集成。7 年前端打底，近两年独立交付百丽「丽境」AI 平台双端、KingPilot ERP Agent、fileMind 本地 RAG。" />
+<meta name="description" content="AI Agent 全栈工程师。Agent 编排与流式交互、RAG 检索、电商中台与 ERP 集成。7 年前端打底，近两年独立交付百丽「丽境」AI 平台双端、KingPilot ERP Agent。" />
 <style>
   :root {
     --bg: #0b0e14;
@@ -337,7 +337,7 @@
       <p class="thesis">
         主攻 <b>Agent 编排与流式交互</b>、<b>RAG 检索</b>、<b>电商中台与 ERP 集成</b>；
         7 年前端打底，近两年独立交付 <b>Python Agent 层 + 前端事件消费层</b> 双端，生产项目 AI 功能日均调用超万次；
-        独立开源 KingPilot（企业 ERP Agent）、fileMind（本地 RAG 桌面应用）。
+        独立开源 KingPilot（企业 ERP Agent）。
       </p>
       <div class="stats">
         <div class="stat"><div class="n">7<em> 年</em></div><div class="l">前端研发经验</div></div>
@@ -491,27 +491,6 @@
       </ul>
       <div class="chips">
         <span class="chip">Python 3.11</span><span class="chip">FastAPI</span><span class="chip">ReAct</span><span class="chip">Function Calling</span><span class="chip">BM25 RAG</span><span class="chip">幻觉检测</span><span class="chip">Approval HITL</span><span class="chip">多租户</span><span class="chip">Eval + Release Gate</span><span class="chip">Saga</span><span class="chip">pytest</span>
-      </div>
-    </div>
-
-    <div class="proj reveal">
-      <div class="ph">
-        <h3>fileMind · 本地文件 RAG 问答</h3><span class="role">独立全栈开发</span>
-        <span class="date">2026</span>
-      </div>
-      <p class="sum">
-        本地文件 RAG 问答桌面应用：文件整理与问答放在同一套流程里，本地文件直接作为知识库，默认所有 AI 处理在本地完成（Ollama），云端推理需显式同意。源码：<a href="https://github.com/yyu-wang/fileMind" target="_blank" rel="noopener">github.com/yyu-wang/fileMind</a>
-      </p>
-      <ul>
-        <li><b>跨语言三端架构</b>：Rust 壳层（Tauri 2）负责文件系统 / SQLite / 窗口管理，React 19 + Zustand 前端，Python FastAPI Sidecar 负责 RAG 全链路；Rust 层是唯一客户端——前端永不直连 Sidecar，通过 <b>HMAC-SHA256 签名 + 递增序号</b>防重放通信</li>
-        <li><b>RAG 全链路自研</b>（7 步流水线）：查询改写（代词消解 + 关键词扩展）→ 双路检索（FTS5 BM25 Top-20 + LanceDB 向量 Top-20）→ <b>RRF 融合排序</b> → BGE-reranker 精排 Top-5 → LLM 生成 → <b>自我纠正</b>（幻觉检测 + 引用验证，最多重试 2 次）→ SSE 流式回答带引用标签跳转源文件</li>
-        <li><b>本地优先 + 多模型支持</b>：默认 Ollama 本地推理（Embedding + LLM），支持 OpenAI / DeepSeek 云端 Provider；Embedding 模型热切换、向量表按 model + version 隔离；LRU + TTL 查询缓存命中时整条管线跳过</li>
-        <li><b>安全设计</b>：Sidecar 握手协议（PSK 存放操作系统钥匙串，永不落前端或 Python）、路径安全守卫（系统目录黑名单 + 路径穿越检查）、推理模式切换门（云端需签署同意书，撤回自动切回本地）、操作日志<b>链式 SHA-256 哈希</b>防篡改</li>
-        <li><b>智能分类引擎</b>：规则引擎 + 启发式兜底 + LLM 兜底三级分类策略，分类预览 → 带进度遮罩执行 → <b>24 小时撤销窗口</b>；内置评估框架（准确率 ≥85%、规则覆盖率 ≥70%）</li>
-        <li><b>工程化</b>：tauri-specta 从 Rust 自动生成 TypeScript IPC 类型（禁止手改）；Vitest + cargo test + pytest 三层测试；ESLint + Clippy + Ruff + mypy 全链路 lint；GitHub Actions 双平台构建（macOS + Windows）</li>
-      </ul>
-      <div class="chips">
-        <span class="chip">Tauri 2</span><span class="chip">Rust</span><span class="chip">React 19</span><span class="chip">FastAPI</span><span class="chip">RAG</span><span class="chip">LanceDB</span><span class="chip">Ollama</span><span class="chip">SQLite FTS5</span><span class="chip">BGE-reranker</span>
       </div>
     </div>
   </div>

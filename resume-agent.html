@@ -258,22 +258,6 @@
         <span class="chip">Vue 3</span><span class="chip">RAG</span><span class="chip">FastAPI</span><span class="chip">Milvus</span><span class="chip">Embedding</span><span class="chip">Function Calling</span><span class="chip">SSE</span>
       </div>
     </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <div class="t">fileMind · 本地文件 RAG 问答桌面应用<span class="sub"> · 独立全栈开发</span></div>
-        <div class="date">个人项目 · 2026</div>
-      </div>
-      <div class="sum">本地优先的文件 RAG 问答桌面应用，默认 AI 处理全部本地完成（Ollama）。跨语言三端架构：Rust 壳层（Tauri 2）· React 19 + Zustand 前端 · Python FastAPI Sidecar。源码：<a href="https://github.com/yyu-wang/fileMind" target="_blank" rel="noopener">github.com/yyu-wang/fileMind</a></div>
-      <div class="chips">
-        <span class="chip">Tauri 2</span><span class="chip">Rust</span><span class="chip">React 19</span><span class="chip">FastAPI</span><span class="chip">RAG</span><span class="chip">LanceDB</span><span class="chip">Ollama</span><span class="chip">SQLite FTS5</span><span class="chip">BGE-reranker</span>
-      </div>
-      <ul class="bul">
-        <li><b>RAG 7 步流水线</b>：查询改写 → 双路检索（BM25 Top-20 + 向量 Top-20）→ <b>RRF 融合排序</b> → BGE-reranker 精排 Top-5 → LLM 生成 → <b>自我纠正</b>（幻觉检测 + 引用验证，重试 2 次）→ SSE 回答带引用跳转</li>
-        <li><b>跨语言安全通信</b>：Rust 层 HMAC-SHA256 + 递增序号防重放；路径安全守卫（系统目录黑名单 + 路径穿越检查）；操作日志链式 SHA-256 防篡改；云端推理需显式同意书</li>
-        <li><b>工程化</b>：tauri-specta 自动生成 IPC 类型；Vitest + cargo test + pytest 三层测试；GitHub Actions 双平台构建</li>
-      </ul>
-    </div>
   </section>
 
   <!-- ================= education ================= -->
