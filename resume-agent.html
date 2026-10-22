@@ -145,7 +145,7 @@
     <h2 class="sec">专业技能<span class="en">SKILLS</span></h2>
     <dl class="kv">
       <dt>Agent 核心</dt>
-      <dd><b>ReAct / Function Calling / MCP</b> 协议 · SSE 流式事件模型（<b>AgentStreamEvent</b>）· Python Agent 层 + 前端事件消费层双端交付 · 幻觉检测（数字事实 / 工具来源 / 业务一致性三重校验）· 多模型接入（OpenAI / <b>Claude</b> / Gemini / DeepSeek / 豆包）· LangChain / LangGraph · Ollama 本地推理</dd>
+      <dd><b>ReAct / Function Calling / MCP</b> 协议 · SSE 流式事件模型（<b>AgentStreamEvent</b>）· Python Agent 层 + 前端事件消费层双端交付 · 幻觉检测（数字事实 / 工具来源 / 业务一致性三重校验）· 多模型接入（OpenAI / Gemini / DeepSeek）· LangChain / LangGraph · Ollama 本地推理</dd>
       <dt>RAG 链路</dt>
       <dd>文档语义切片 · Embedding（Milvus / LanceDB / Ollama）· 双路检索（向量 + SQLite FTS5 BM25）· <b>RRF 融合排序</b> · <b>BGE-reranker</b> 精排 · 引用溯源 · <b>自我纠正</b>（幻觉检测 + 引用验证，最多重试 2 次）</dd>
       <dt>Agent 治理</dt>
@@ -161,23 +161,23 @@
 
     <div class="entry">
       <div class="entry-head">
-        <div class="t">百丽时尚集团 · AI Agent 开发</div>
+        <div class="t">百丽时尚集团 · AI Agent 开发 / 前端开发</div>
         <div class="date">2025.09 – 2026.07</div>
       </div>
-      <div class="sum">先后交付 AI Agent 平台「丽境」、百丽自动化 Agent 系统；统一 Vue 3.5 + TypeScript + Vite 技术栈，负责 Agent 事件消费层架构设计与核心攻坚。</div>
+      <div class="sum">先后交付「丽境」AI 平台、「丽构」Agent 系统、百企；统一 Vue 3.5 + TypeScript + Vite 技术栈，负责 Agent 事件消费层架构设计与核心攻坚。</div>
       <ul class="bul">
-        <li>主导「丽境」Agent 平台<b>双端交付</b>：独立实现 Python Agent 层（编排调度 3 家供应商、SSE 推流）与前端 Agent 链路（协议归一化 + 事件消费层、tool_id 状态聚合、多类工具并发消费），上线后 AI 功能<b>日均调用超万次</b></li>
-        <li>攻坚万级节点脑图渲染与虚拟滚动等高性能方案，沉淀跨产品复用模板系统与 Agent 研发提效方案</li>
-        <li>协助编写 <b>bl-frontendskill</b> 团队前端技能库，沉淀 AI 结对开发规范与最佳实践</li>
+        <li>主导「丽境」AI 平台<b>双端交付</b>：独立实现 Python Agent 层（编排调度 3 家供应商、SSE 推流）与前端 Agent 链路（协议归一化 + 事件消费层、tool_id 状态聚合、多类工具并发消费）；独立承担移动端重构——Vue3 + Vite 工程嵌入钉钉工作台，对齐 PC 端绝大部分功能；上线后 AI 功能<b>日均调用超万次</b></li>
+        <li>共建多模型并行生图链路前端：Python 侧并行调度 Gemini / GPT / Seedream 三条生图通道，前端逐帧分槽渲染 + 预占位 + 乱序回填，AbortSignal 贯穿取消；基于 <b>onnxruntime-web</b> 集成 Segment Anything 端侧分割（浏览器内点击生成蒙版 → 驱动 AI 局部重绘），Canvas / Fabric.js 图像编辑 + Three.js 3D 预览</li>
+        <li><b>百企</b>：负责订单列表万级数据<b>按行虚拟滚动</b>方案，滚动保持 60fps；沉淀跨产品复用管理后台模板系统，协助编写 <b>bl-frontendskill</b> 团队前端技能库，沉淀 AI 结对开发规范与最佳实践</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
         <div class="t">深圳市高视维创意有限公司 · 前端开发负责人</div>
-        <div class="date">2023.12 – 2025.04</div>
+        <div class="date">2024.01 – 2025.04</div>
       </div>
-      <div class="sum">主导 EduGPT 教育 AI Agent 平台（RAG 检索后端 + 管理后台 / 学生客户端双端前端）架构与核心开发；按业务域拆分 15+ 独立模块，支撑团队并行开发。</div>
+      <div class="sum">主导 EduGPT AI教育平台（「备课 – 授课 – 作业 – 学情」全链路 + 学科知识库后端，管理后台 / 学生客户端双端前端）架构与核心开发；按业务域拆分 15+ 独立模块，支撑团队并行开发。</div>
       <ul class="bul">
         <li>负责前端小组<b>任务拆分、代码评审与技术方案决策</b>，统一代码规范与工程体系，保障双端系统并行开发高质量交付</li>
         <li>主导<b>向量存储管理</b>（创建 / 文件上传 / 助手关联）、AI 绘画并发排队、SSE 流式对话等 AI 核心基建实现</li>
@@ -189,7 +189,7 @@
         <div class="t">深圳市布雷泽科技有限公司 · 前端开发工程师</div>
         <div class="date">2022.06 – 2023.09</div>
       </div>
-      <div class="sum">主导 <b>Vue2 → Vue3 + TS + Vite</b> 渐进式迁移（业务零中断）；交付电商 ERP（金蝶对接 / Shopify 渠道接入）、长青老龄大学小程序双端；搭建 JSON Schema 低代码表单引擎、分片上传、RBAC，沉淀 30+ 可复用组件。</div>
+      <div class="sum">主导 <b>Vue2 → Vue3 + TS + Vite</b> 渐进式迁移（业务零中断）；交付贵小乡 ERP、长青老龄大学小程序双端、金山 KOS 考试系统等多端项目；搭建 JSON Schema 低代码表单引擎、分片上传、RBAC，沉淀 30+ 可复用组件。</div>
     </div>
 
     <div class="entry">
@@ -207,56 +207,67 @@
 
     <div class="entry">
       <div class="entry-head">
-        <div class="t">丽境 · 百丽 AI Agent 平台<span class="sub"> · AI Agent 开发</span></div>
+        <div class="t">丽境 AI 平台<span class="sub"> · AI Agent 开发</span></div>
         <div class="date">2026.01 – 2026.07</div>
       </div>
       <div class="sum">鞋服设计需同时对接多家大模型供应商，Agent 协议各异、工具调用状态分散——主导打造覆盖「Agent 对话 → 工具消费 → 智能生图 → 图像编辑 → 趋势洞察」全链路的 <b>AI Agent 平台</b>，独立实现<b>前端 + Python Agent 层双端</b>：前端交互与事件消费、Python 执行编排与多模型调度（<b>Java 服务</b>负责业务数据）。设计<b>Agent 事件消费层</b>，双通道整合 SSE 事件流与 REST 业务数据，服务鞋服箱包行业设计师，并负责<b>独立自动化编排系统</b>的前端模块。<span class="badge">上线后 AI 功能日均调用超万次</span></div>
       <div class="chips">
-        <span class="chip">Vue 3</span><span class="chip">TypeScript</span><span class="chip">SSE</span><span class="chip">@microsoft/fetch-event-source</span><span class="chip">AgentStreamEvent</span><span class="chip">Gemini</span><span class="chip">GPT</span><span class="chip">Seedream</span><span class="chip">onnxruntime-web</span><span class="chip">Canvas 2D</span><span class="chip">Fabric.js</span><span class="chip">Three.js</span>
+        <span class="chip">Vue 3</span><span class="chip">TypeScript</span><span class="chip">SSE</span><span class="chip">AgentStreamEvent</span><span class="chip">ReAct</span><span class="chip">Function Calling</span><span class="chip">Gemini</span><span class="chip">GPT</span><span class="chip">Seedream</span>
       </div>
       <ul class="bul">
-        <li><b>前端协议归一化层</b>：Kondo / AgentPro BTY / 斑头雁三家供应商协议统一收敛为 <b>AgentStreamEvent</b> 事件模型（思考 / 工具 / 正文 / 追问），新增供应商仅需扩展解析器，UI 零改动</li>
-        <li><b>事件驱动渲染引擎</b>：按 <b>tool_id 实时聚合</b>并发工具状态，每类工具专属消费组件（工具气泡 / 思考块 / 追问），AbortSignal 贯穿取消链路；Python 侧并行调度 Gemini / GPT / 字节 Seedream 三条生图通道（局部改款走 FLUX），前端逐帧分槽渲染 + 队列三态管理</li>
-        <li><b>端侧推理 + 性能</b>：<b>onnxruntime-web</b> 浏览器内跑 Segment Anything 点击分割 → Canvas 标注驱动 AI 局部重绘；Fabric.js 图像编辑 + Three.js 3D 预览；万级节点脑图渲染 + 按行虚拟滚动保持 60fps</li>
+        <li><b>Python Agent 层</b>：独立实现 ReAct 主循环——思考 → Function Calling 工具路由 → 执行 → 反思；内置三家供应商（Kondo / AgentPro BTY / 斑头雁）协议适配器，统一暴露 Function Calling 工具接口；多模型并行调度（Gemini / GPT / Seedream 三条生图通道，局部改款走 FLUX），失败自动降级；SSE 流式推流 + 步数熔断，上线后 AI 功能日均调用超万次</li>
+        <li><b>前端协议归一化 + 事件消费层</b>：三家供应商流式协议收敛为统一 <b>AgentStreamEvent</b> 事件模型（思考 / 工具 / 正文 / 追问 / 完成），新增供应商仅扩展解析器、UI 零改动；按 <b>tool_id 实时聚合</b>并发工具状态，每类工具配专属消费组件（工具气泡 / 思考块 / 追问），事件驱动五阶段渲染；AbortSignal 贯穿取消链路</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <div class="t">百丽自动化 Agent 系统<span class="sub"> · 前端核心开发</span></div>
+        <div class="t">丽构 Agent 系统<span class="sub"> · 前端开发</span></div>
         <div class="date">2025.09 – 2025.12</div>
       </div>
-      <div class="sum">原型上传 → Agent 按前端 Skill 生成可运行代码 → 在线 diff 预览 → 人工确认 → Docker 自动部署；SSE 分阶段推送（解析 / 规划 / 生成 / 校验 / 部署），异常可中断重试。</div>
+      <div class="sum">面向需求 → UI → 前端 → 后端 → 测试 → 发布的完整开发流程 Agent 系统，团队按环节分工；负责<b>前端方向</b>——Skill 体系设计与前端模板开发，让 Agent 在全流程中能生成符合团队规范的前端代码。</div>
       <div class="chips">
-        <span class="chip">Vue 3</span><span class="chip">TypeScript</span><span class="chip">SSE</span><span class="chip">Function Calling</span><span class="chip">Docker</span>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <div class="t">KingPilot · 企业级 ERP 智能 Agent<span class="sub"> · 独立开发</span></div>
-        <div class="date">个人项目 · 2026</div>
-      </div>
-      <div class="sum">面向企业 ERP 的厂商中立 Agent 平台：Python ErpClient Protocol 契约解耦厂商，「记忆 → 规划 → 安全护栏 → 执行 → 反思」五阶段主循环，配齐 fail-closed 安全体系、HITL 人工审批、离线评测 + 发布门禁、多租户隔离等企业级治理设施。<a href="https://github.com/yyu-wang/kingpilot" target="_blank" rel="noopener">github.com/yyu-wang/kingpilot</a></div>
-      <div class="chips">
-        <span class="chip">Python 3.11</span><span class="chip">FastAPI</span><span class="chip">ReAct</span><span class="chip">Function Calling</span><span class="chip">BM25 RAG</span><span class="chip">HITL</span><span class="chip">多租户</span><span class="chip">Saga</span><span class="chip">pytest</span>
+        <span class="chip">Vue 3</span><span class="chip">TypeScript</span><span class="chip">Function Calling</span><span class="chip">Skill 体系</span><span class="chip">前端模板</span><span class="chip">组件库</span>
       </div>
       <ul class="bul">
-        <li><b>fail-closed 安全体系</b>：6 类 Guard 管道（实体 / 限额 / 参数 / Schema / SQL）+ 权限引擎 + 风险引擎；高危写操作强制进入<b>人工审批网关</b>——持久化状态机 + 双人复核 + 幂等恢复</li>
-        <li><b>发布门禁治理闭环</b>：黄金集离线评测 → 逐指标判定，指标回退 fail-closed 拒绝发布；语义缓存（仅只读计划复用）；Badcase 处理台标记 / 脱敏 / 回流评测</li>
-        <li>企业级工程：<b>Saga 事务倒序补偿</b>、<b>Hash Chain 写台账防篡改</b>、多租户五类存储隔离、密钥热轮换（File / Vault）、金蝶沙箱模拟器联调、<b>106 个 pytest</b> 覆盖安全注入与 LLM 宕机混沌</li>
+        <li><b>前端 Skill 体系设计</b>：把团队积累的组件库用法、页面模板结构、开发规范整理为 Agent 可调用的 Skill，在全流程系统中当前端环节被触发时，Agent 按页面类型自动匹配对应 Skill（表单页 / 列表页 / 详情页 / 仪表盘），新增 Skill 即插即用</li>
+        <li><b>前端模板开发</b>：沉淀管理后台通用页面模板（列表 / 表单 / 详情 / 工作台），与 Skill 配合——Agent 生成前端代码时先套用模板骨架、再填充业务组件，生成质量与一致性大幅提升；生成记录与 Skill 命中情况留存，便于复盘哪类页面生成不稳定</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <div class="t">EduGPT · 教育 AI Agent 平台<span class="sub"> · 前端负责人（兼 RAG 后端）</span></div>
+        <div class="t">KingPilot · ERP 智能 Agent<span class="sub"> · 独立开发</span></div>
+        <div class="date">个人项目 · 2026</div>
+      </div>
+      <div class="sum">厂商中立的 ERP Agent 平台：Python Protocol 契约解耦厂商（已适配<b>金蝶 + 用友</b>），「记忆 → 规划 → 安全护栏 → 执行 → 反思」五阶段主循环，含采购订单/入库、销售订单等写流程，离线评测 <b>43 题选对率 97.7%</b>，测试 <b>1324 passed</b>。源码：<a href="https://github.com/yyu-wang/kingpilot" target="_blank" rel="noopener">github.com/yyu-wang/kingpilot</a></div>
+      <div class="chips">
+        <span class="chip">Python 3.12</span><span class="chip">FastAPI</span><span class="chip">ReAct</span><span class="chip">Function Calling</span><span class="chip">BM25 RAG</span><span class="chip">HITL</span><span class="chip">多租户</span><span class="chip">Saga</span><span class="chip">yonyou / kingdee</span>
+      </div>
+      <ul class="bul">
+        <li><b>ERP 适配层</b>：ErpClient Protocol 契约解耦厂商——查询 / 写动作 / 资源释放三方法，工厂按配置装配；已实现金蝶 + 用友两套适配，新增厂商只需实现协议 → 声明端点 → 工厂注册；金蝶/用友沙箱模拟器联调，采购订单下单 / 采购入库完整写流程</li>
+        <li><b>fail-closed 安全体系</b>：6 类 Guard 管道（实体 / 限额 / 参数 / Schema / SQL）+ 权限引擎 + 风险引擎；高危写操作强制进入<b>人工审批网关</b>——持久化状态机 + 双人复核 + 幂等恢复；<b>Hash Chain 写台账</b>防篡改，Saga 事务倒序补偿</li>
+        <li><b>治理与评测</b>：黄金集离线评测（43 题选对率 97.7%）→ 发布门禁逐指标判定，指标回退 fail-closed 拒绝发布；<b>本地 BM25 RAG 知识库</b>（中文 unigram/bigram 索引、增量更新、幂等摄入）；含 instruction_finetune_dataset.json SFT 微调数据集；1324 个 pytest 覆盖安全注入与 LLM 宕机混沌</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="t">EduGPT AI教育平台<span class="sub"> · 前端负责人</span></div>
         <div class="date">2024.01 – 2025.03</div>
       </div>
-      <div class="sum">教师上传教材 → 生成 RAG 学科 Agent，检索增强回答带引用溯源。前端负责双端架构与小组管理，独立实现 RAG 后端（语义切片 → Milvus 入库 → 混合召回 + Rerank 精排 → 引用溯源），OCR 拍照录题辅助批改效率提升 50%。</div>
+      <div class="sum">教育行业 AI 应用分散、备课授课作业链路割裂——主导「备课 – 授课 – 作业 – 学情」全链路 AI 教学平台，管理后台 + 学生客户端双端系统。</div>
       <div class="chips">
-        <span class="chip">Vue 3</span><span class="chip">RAG</span><span class="chip">FastAPI</span><span class="chip">Milvus</span><span class="chip">Embedding</span><span class="chip">Function Calling</span><span class="chip">SSE</span>
+        <span class="chip">Vue 3</span><span class="chip">TypeScript</span><span class="chip">SSE</span><span class="chip">Konva.js</span><span class="chip">md-editor-v3</span><span class="chip">KaTeX</span><span class="chip">pdf.js</span><span class="chip">百度云 OCR</span>
       </div>
+      <ul class="bul">
+        <li><b>SSE 流式对话系统</b>：AI 助手实时逐字输出，Markdown + LaTeX 公式即时渲染（LaTeX 转义规范化处理），断线自动重连，弱网场景对话不中断；设计会话生命周期管理——首次提问自动创建会话并智能命名、Token 余额实时扣减与可视化</li>
+        <li><b>AI 绘画引擎</b>：文生图、沉浸式 / 引导式双模式，16 种学科风格模板 + 12 种色彩配置，排队机制平滑处理并发请求</li>
+        <li><b>Konva.js 智能课件画布</b>：元素自由拖拽 / 旋转缩放 / 层级调整 + Undo/Redo 命令栈，配置教学资源一键生成带语音讲解课件（MP4 / PDF 导出）</li>
+        <li><b>百度云 OCR 拍照录题</b>：打通拍照识别 → 客观题自动评分、主观题辅助批改全流程，作业处理效率提升 50%；组卷系统融合标签化题库与协同过滤算法智能推荐</li>
+        <li><b>TypeScript 泛型驱动 ProTable 配置化引擎</b>（76+ 组件自动注册，配置化开发效率大幅提升）；完成 AI 对话 / 绘画 / 题库 / 学情等 15+ 模块与中 / 英 / 繁三语言国际化</li>
+        <li><b>学科知识库</b>：教材 / 课件多格式解析清洗，按语义边界切片（重叠窗口防截断），Embedding 向量化入库（Milvus）；检索链路 = 查询预处理（指代消解）→ 混合召回（向量 + 关键词）→ Rerank 精排 → Top-K 注入 Prompt，生成带引用溯源的回答（chunk 与原文段落映射，答案可回跳出处）</li>
+      </ul>
     </div>
   </section>
 
@@ -268,7 +279,6 @@
         <div class="t">深圳大学 · 软件工程 · 本科在读（成人）</div>
         <div class="date">2026 – 2029</div>
       </div>
-      <div class="sum">大专毕业 7 年后提升学历，在职就读</div>
     </div>
     <div class="entry">
       <div class="entry-head">
