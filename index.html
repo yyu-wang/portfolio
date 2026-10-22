@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>王嵛 · 资深前端 / AI Agent 全栈 · 求职作品集</title>
-<meta name="description" content="7 年前端，近两年 AI Agent 全栈。Agent 编排与流式交互、RAG 检索、电商中台与 ERP 集成。百丽 AI 设计平台「丽境」双端交付，独立开发 KingPilot、fileMind。" />
+<title>王嵛 · AI Agent 全栈工程师 · 求职作品集</title>
+<meta name="description" content="AI Agent 全栈工程师。Agent 编排与流式交互、RAG 检索、电商中台与 ERP 集成。7 年前端打底，近两年独立交付百丽「丽境」AI 平台双端、KingPilot ERP Agent、fileMind 本地 RAG。" />
 <style>
   :root {
     --bg: #0b0e14;
@@ -331,13 +331,13 @@
 <header class="hero">
   <div class="wrap grid">
     <div>
-      <div class="eyebrow"><span class="c">//</span> 资深前端开发工程师 · AI Agent 全栈 · 7 年</div>
+      <div class="eyebrow"><span class="c">//</span> AI Agent 全栈工程师 · RAG / Agent 编排 / 多模型治理 · 7 年</div>
       <h1>王 嵛</h1>
-      <div class="pos">前端打底，向上做 Agent 全栈，向下接电商与 ERP</div>
+      <div class="pos">Agent 全栈为主，前端打底，电商 ERP 业务纵深</div>
       <p class="thesis">
         主攻 <b>Agent 编排与流式交互</b>、<b>RAG 检索</b>、<b>电商中台与 ERP 集成</b>；
-        7 年前端，近两年做 AI Agent 全栈，能独立完成 Python / Node 后端与 Web / 小程序 / 桌面端交付。
-        主导百丽 AI 设计平台「丽境」双端交付，AI 功能日均调用超万次。
+        7 年前端打底，近两年独立交付 <b>Python Agent 层 + 前端事件消费层</b> 双端，生产项目 AI 功能日均调用超万次；
+        独立开源 KingPilot（企业 ERP Agent）、fileMind（本地 RAG 桌面应用）。
       </p>
       <div class="stats">
         <div class="stat"><div class="n">7<em> 年</em></div><div class="l">前端研发经验</div></div>
@@ -500,7 +500,7 @@
         <span class="date">2026</span>
       </div>
       <p class="sum">
-        本地文件 RAG 问答桌面应用：文件整理与问答放在同一套流程里，本地文件直接作为知识库，默认所有 AI 处理在本地完成（Ollama），云端推理需显式同意。
+        本地文件 RAG 问答桌面应用：文件整理与问答放在同一套流程里，本地文件直接作为知识库，默认所有 AI 处理在本地完成（Ollama），云端推理需显式同意。源码：<a href="https://github.com/yyu-wang/fileMind" target="_blank" rel="noopener">github.com/yyu-wang/fileMind</a>
       </p>
       <ul>
         <li><b>跨语言三端架构</b>：Rust 壳层（Tauri 2）负责文件系统 / SQLite / 窗口管理，React 19 + Zustand 前端，Python FastAPI Sidecar 负责 RAG 全链路；Rust 层是唯一客户端——前端永不直连 Sidecar，通过 <b>HMAC-SHA256 签名 + 递增序号</b>防重放通信</li>
@@ -533,9 +533,9 @@
       <dt>后端</dt>
       <dd>FastAPI 异步接口 · NestJS 模块与守卫 · REST / GraphQL · JWT / OAuth · 多租户隔离 · MySQL 索引优化 · Redis 缓存与分布式锁 · MQ 重试死信</dd>
       <dt>Agent</dt>
-      <dd>多模型接入（OpenAI / Gemini / 豆包）· <b>SSE 事件模型</b> · Prompt / ReAct / Function Calling / MCP · 上下文记忆与多工具并发编排 · LangChain / LangGraph</dd>
+      <dd>多模型接入（OpenAI / Claude / Gemini / DeepSeek / 豆包）· <b>SSE 事件模型</b> · Prompt / ReAct / Function Calling / MCP · 上下文记忆与多工具并发编排 · LangChain / LangGraph · Ollama 本地推理</dd>
       <dt>RAG</dt>
-      <dd>文档切片 · Embedding（Milvus / LanceDB）· BM25 · 混合召回 · RRF 融合 · Rerank 精排 · 引用溯源 · Top-K 调优</dd>
+      <dd>文档切片 · Embedding（Milvus / LanceDB / Ollama）· BM25（SQLite FTS5）· 混合召回 · <b>RRF 融合排序</b> · Rerank 精排（BGE-reranker）· 引用溯源 · Top-K 调优 · 自我纠正</dd>
       <dt>Agent 治理</dt>
       <dd>黄金集评测与发布门禁 · 幻觉检测 · fail-closed 护栏 · HITL 人工审批 · Saga 补偿 · Hash Chain 台账 · 多租户 · pytest</dd>
       <dt>电商 / ERP</dt>
@@ -607,7 +607,7 @@
 
 <footer>
   <div class="wrap">
-    <span>王嵛 · 资深前端 / AI Agent 全栈</span>
+    <span>王嵛 · AI Agent 全栈工程师</span>
     <code>portfolio · 单文件 · 零依赖</code>
     <span class="fin">// stream: completed ✓</span>
   </div>
