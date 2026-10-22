@@ -145,13 +145,13 @@
     <h2 class="sec">专业技能<span class="en">SKILLS</span></h2>
     <dl class="kv">
       <dt>Agent 核心</dt>
-      <dd><b>ReAct / Function Calling / MCP</b> 协议 · SSE 流式事件模型（<b>AgentStreamEvent</b>）· Python Agent 层 + 前端事件消费层双端交付 · 幻觉检测（数字事实 / 工具来源 / 业务一致性三重校验）· 多模型接入（OpenAI / Gemini / DeepSeek）· LangChain / LangGraph · Ollama 本地推理</dd>
+      <dd><b>ReAct / Function Calling / MCP</b> 协议 · SSE 流式事件模型（<b>AgentStreamEvent</b>）· Python Agent 层 + 前端事件消费层双端交付 · <b>三层记忆</b>（原文 / LLM 摘要 / 实体图 + 跨会话用户画像）· <b>长对话压缩</b>（预算 / 阈值 / 滚动三触发）· 会话与任务持久化（原子落盘 + 中断幂等恢复）· 幻觉检测（数字事实 / 工具来源 / 业务一致性三重校验）· 多模型接入（OpenAI / Gemini / 即梦 Seedream，<b>3 家供应商</b>协议归一化）· LangChain / LangGraph · Ollama 本地推理</dd>
       <dt>RAG 链路</dt>
       <dd>文档语义切片 · Embedding（Milvus / LanceDB / Ollama）· 双路检索（向量 + SQLite FTS5 BM25）· <b>RRF 融合排序</b> · <b>BGE-reranker</b> 精排 · 引用溯源 · <b>自我纠正</b>（幻觉检测 + 引用验证，最多重试 2 次）</dd>
       <dt>Agent 治理</dt>
-      <dd><b>fail-closed 安全体系</b>（6 类 Guard 管道 + 权限引擎 + 风险引擎）· <b>HITL 人工审批网关</b>（双人复核状态机 + 幂等恢复）· 黄金集离线评测 → <b>发布门禁</b>逐指标判定 · Saga 事务补偿 · Hash Chain 写台账防篡改 · 多租户隔离 · 语义缓存 · <b>106 个 pytest 测试模块</b></dd>
+      <dd><b>fail-closed 安全体系</b>（6 类 Guard 管道 + 权限引擎 + 风险引擎）· <b>HITL 人工审批网关</b>（双人复核状态机 + 幂等恢复）· 黄金集离线评测 → <b>发布门禁</b>逐指标判定 · Saga 事务补偿 · Hash Chain 写台账防篡改 · 多租户隔离 · 语义缓存 · <b>106 个 pytest 测试模块 / 1324 条用例</b></dd>
       <dt>全栈与前端</dt>
-      <dd><b>FastAPI / NestJS</b> 后端独立交付 · <b>Vue 3 / React 19 / TypeScript</b> 前端低代码表单引擎 · Docker + GitHub Actions CI/CD · 万级列表虚拟滚动 60fps · onnxruntime-web 端侧推理（Segment Anything 点击分割）· Canvas 脑图渲染 · Fabric.js / Three.js 图形交互</dd>
+      <dd><b>FastAPI / NestJS</b> 后端独立交付 · <b>Vue 3 / React 19 / TypeScript</b> 前端 · JSON Schema 低代码表单引擎（单页开发提效 <b>60%</b>）· <b>30+</b> 复用组件 · Docker + GitHub Actions CI/CD · 万级列表虚拟滚动 60fps · onnxruntime-web 端侧推理（Segment Anything 点击分割）· Canvas 脑图渲染 · Fabric.js / Three.js 图形交互</dd>
     </dl>
   </section>
 
